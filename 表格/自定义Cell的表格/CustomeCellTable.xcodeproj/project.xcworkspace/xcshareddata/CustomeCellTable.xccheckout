@@ -10,43 +10,31 @@
 	<string>CustomeCellTable</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>473289F1A24F77DFF95E925D71A9D13ED9830228</key>
-		<string>https://github.com/chu888chu888/CellCustom.git</string>
-		<key>D582B09097F8CE39A9E9A7B7F2ED9E72DB6102BF</key>
-		<string>https://github.com/chu888chu888/IOS-CustomeCellTable2.git</string>
+		<key>2AC3423ADEDCDDF3DE1F3C268660B122012CC715</key>
+		<string>https://github.com/chu888chu888/IOS-NONib.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>CustomeCellTable.xcodeproj</string>
+	<string>表格/table/CustomeCellTable.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>473289F1A24F77DFF95E925D71A9D13ED9830228</key>
-		<string>../../../CellCustom</string>
-		<key>D582B09097F8CE39A9E9A7B7F2ED9E72DB6102BF</key>
-		<string>../..</string>
+		<key>2AC3423ADEDCDDF3DE1F3C268660B122012CC715</key>
+		<string>../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/chu888chu888/IOS-CustomeCellTable2.git</string>
+	<string>https://github.com/chu888chu888/IOS-NONib.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>D582B09097F8CE39A9E9A7B7F2ED9E72DB6102BF</string>
+	<string>2AC3423ADEDCDDF3DE1F3C268660B122012CC715</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>473289F1A24F77DFF95E925D71A9D13ED9830228</string>
+			<string>2AC3423ADEDCDDF3DE1F3C268660B122012CC715</string>
 			<key>IDESourceControlWCCName</key>
-			<string>CellCustom</string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>D582B09097F8CE39A9E9A7B7F2ED9E72DB6102BF</string>
-			<key>IDESourceControlWCCName</key>
-			<string>CustomeCellTable</string>
+			<string>%E6%89%8B%E5%86%99%E4%BB%A3%E7%A0%81%E5%A4%A7%E5%90%88%E9%9B%86</string>
 		</dict>
 	</array>
 </dict>
