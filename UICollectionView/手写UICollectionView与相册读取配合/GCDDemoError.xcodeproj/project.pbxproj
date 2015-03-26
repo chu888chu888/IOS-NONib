@@ -36,6 +36,7 @@
 		B96787531ABD5DB300DBE75E /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = B967874D1ABD5DB300DBE75E /* Utils.m */; };
 		B96787551ABD615F00DBE75E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B96787541ABD615F00DBE75E /* CoreGraphics.framework */; };
 		B97637451AC013AA00544D0F /* PhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B97637441AC013AA00544D0F /* PhotoCell.m */; };
+		B9A6AB451AC291A800593626 /* LineLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A6AB441AC291A800593626 /* LineLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,8 @@
 		B96787541ABD615F00DBE75E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		B97637431AC013AA00544D0F /* PhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCell.h; sourceTree = "<group>"; };
 		B97637441AC013AA00544D0F /* PhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCell.m; sourceTree = "<group>"; };
+		B9A6AB431AC291A800593626 /* LineLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineLayout.h; sourceTree = "<group>"; };
+		B9A6AB441AC291A800593626 /* LineLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +247,8 @@
 				B967874B1ABD5DB300DBE75E /* UIImage+RoundedCorner.m */,
 				B967874C1ABD5DB300DBE75E /* Utils.h */,
 				B967874D1ABD5DB300DBE75E /* Utils.m */,
+				B9A6AB431AC291A800593626 /* LineLayout.h */,
+				B9A6AB441AC291A800593626 /* LineLayout.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -392,6 +397,7 @@
 				B96787521ABD5DB300DBE75E /* UIImage+RoundedCorner.m in Sources */,
 				B96787501ABD5DB300DBE75E /* UIImage+Alpha.m in Sources */,
 				B96787291ABD5ACE00DBE75E /* ELCImagePickerController.m in Sources */,
+				B9A6AB451AC291A800593626 /* LineLayout.m in Sources */,
 				B96787251ABD5ACE00DBE75E /* ELCAlbumPickerController.m in Sources */,
 				B96787411ABD5C1300DBE75E /* PhotoCollectionViewController.m in Sources */,
 			);

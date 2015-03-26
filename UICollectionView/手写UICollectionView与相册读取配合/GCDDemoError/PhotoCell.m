@@ -18,7 +18,10 @@
         self.backgroundColor=[UIColor clearColor];
         self.ImageView = [[UIImageView alloc]initWithFrame:
                                      CGRectMake(0, 0, CGRectGetWidth(self.frame), CGRectGetWidth(self.frame))];
-        [self addSubview:self.ImageView];
+        self.ImageView.autoresizingMask=UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
+        [self.contentView addSubview:self.ImageView];
+        self.contentView.layer.borderWidth=1.0f;
+        self.contentView.layer.borderColor=[UIColor whiteColor].CGColor;
         
     }
     return self;

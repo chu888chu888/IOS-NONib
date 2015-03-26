@@ -95,7 +95,7 @@
 #import "LineLayout.h"
 
 
-#define ITEM_SIZE 200.0
+#define ITEM_SIZE 100.0
 
 @implementation LineLayout
 
@@ -116,9 +116,13 @@
 
 - (BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)oldBounds
 {
-    return YES;
+    CGRect newBounds = self.collectionView.bounds;
+    if (CGRectGetWidth(newBounds) != CGRectGetWidth(oldBounds)) {
+        return YES;
+    }
+    return NO;
 }
-
+/*
 -(NSArray*)layoutAttributesForElementsInRect:(CGRect)rect
 {
     NSArray* array = [super layoutAttributesForElementsInRect:rect];
@@ -139,8 +143,8 @@
     }
     return array;
 }
-
-
+*/
+/*
 - (CGPoint)targetContentOffsetForProposedContentOffset:(CGPoint)proposedContentOffset withScrollingVelocity:(CGPoint)velocity
 {
     CGFloat offsetAdjustment = MAXFLOAT;
@@ -157,5 +161,5 @@
     }    
     return CGPointMake(proposedContentOffset.x + offsetAdjustment, proposedContentOffset.y);
 }
-
+*/
 @end

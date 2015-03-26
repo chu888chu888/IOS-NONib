@@ -12,12 +12,10 @@
 #import <AssetsLibrary/AssetsLibrary.h>
 #import "ELCImagePickerController.h"
 #import "PhotoCell.h"
-
+#import "LineLayout.h"
 #define kVerticalMarginForCollectionViewItems 0
-#define fDeviceWidth [UIScreen mainScreen].bounds.size.width
-#define fDeviceHeight [UIScreen mainScreen].bounds.size.height
-static const NSInteger kCellImageViewTag = 3;
-static const CGFloat kBackgroundImageOpacity = 0.5f;
+#define kBackgroundImageOpacity 0.5f
+
 @interface PhotoCollectionViewController ()
 @property (nonatomic, strong) ALAssetsLibrary *library;
 @property (nonatomic, strong) UIPopoverController *popController;
@@ -34,20 +32,14 @@ static const CGFloat kBackgroundImageOpacity = 0.5f;
 }
 
 - (void)SetupCollectionView {
-    UICollectionViewFlowLayout *flowLayout=[[UICollectionViewFlowLayout alloc]init];
-    [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
-    self.collectionView=[[UICollectionView alloc]initWithFrame:[UIScreen mainScreen].bounds collectionViewLayout:flowLayout];
+   
+    LineLayout *lineLayout=[[LineLayout alloc]init];
+    self.collectionView=[[UICollectionView alloc]initWithFrame:[UIScreen mainScreen].bounds collectionViewLayout:lineLayout];
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
     [self.view addSubview:self.collectionView];
     //注册自定义Cell
     [self.collectionView registerClass:[PhotoCell class] forCellWithReuseIdentifier:@"PhotoCell"];
-    
-    // Background image setup
-    UIImageView *backgroundImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background"]];
-    backgroundImageView.alpha = kBackgroundImageOpacity;
-    backgroundImageView.contentMode = UIViewContentModeCenter;
-    [self.collectionView setBackgroundView:backgroundImageView];
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(contentChangedNotification:)
@@ -71,7 +63,6 @@ static const CGFloat kBackgroundImageOpacity = 0.5f;
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 #pragma mark -UICollectionViewDataSource Methods
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
@@ -102,25 +93,7 @@ static const CGFloat kBackgroundImageOpacity = 0.5f;
     }
     return cell;
 }
-#pragma mark --UICollectionViewDelegateFlowLayout
 
-
-//定义每个UICollectionView 的大小
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    //边距占5*4=20 ，2个
-    //图片为正方形，边长：(fDeviceWidth-20)/2-5-5 所以总高(fDeviceWidth-20)/2-5-5 +20+30+5+5 label高20 btn高30 边
-    return CGSizeMake((fDeviceWidth-20)/3, (fDeviceWidth-20)/4+50);
-}
-//定义每个UICollectionView 的间距
--(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
-{
-    return UIEdgeInsetsMake(0, 2, 2, 2);
-}
-//定义每个UICollectionView 纵向的间距
-- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
-    return 0;
-}
 #pragma mark - UIBarButtonItem method
 /// The upper right UIBarButtonItem method
 - (void)addPhotoAssets
