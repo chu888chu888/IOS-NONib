@@ -58,6 +58,7 @@
 	for (UIViewController *vc in viewControllers) [titles addObject:vc.title];
 	[[NSUserDefaults standardUserDefaults] setObject:titles forKey:@"tabOrder"];
 	[[NSUserDefaults standardUserDefaults] synchronize];
+    NSLog(@"didEndCustomizingViewControllers");
 }
 
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
@@ -65,6 +66,7 @@
 	NSNumber *tabNumber = [NSNumber numberWithInt:[tabBarController selectedIndex]];
 	[[NSUserDefaults standardUserDefaults] setObject:tabNumber forKey:@"selectedTab"];
 	[[NSUserDefaults standardUserDefaults] synchronize];
+    NSLog(@"didSelectViewController");
 }
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application {	

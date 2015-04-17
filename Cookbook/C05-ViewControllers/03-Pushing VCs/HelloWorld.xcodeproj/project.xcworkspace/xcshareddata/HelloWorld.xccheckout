@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>BF5C95D5-637E-492C-B38E-9987D1C9D7BA</string>
+	<key>IDESourceControlProjectName</key>
+	<string>HelloWorld</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>2AC3423ADEDCDDF3DE1F3C268660B122012CC715</key>
+		<string>https://github.com/chu888chu888/IOS-NONib.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Cookbook/C05-ViewControllers/03-Pushing VCs/HelloWorld.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>2AC3423ADEDCDDF3DE1F3C268660B122012CC715</key>
+		<string>../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/chu888chu888/IOS-NONib.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>2AC3423ADEDCDDF3DE1F3C268660B122012CC715</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2AC3423ADEDCDDF3DE1F3C268660B122012CC715</string>
+			<key>IDESourceControlWCCName</key>
+			<string>%E6%89%8B%E5%86%99%E4%BB%A3%E7%A0%81%E5%A4%A7%E5%90%88%E9%9B%86</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -53,7 +53,7 @@
 @implementation TestBedAppDelegate
 - (void)applicationDidFinishLaunching:(UIApplication *)application {	
 	UIWindow *window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-	UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[[TestBedViewController alloc] initWithDepth:1]];
+	UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[[TestBedViewController alloc] initWithDepth:0]];
 	[window addSubview:nav.view];
 	[window makeKeyAndVisible];
 }
