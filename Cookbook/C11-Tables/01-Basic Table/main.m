@@ -40,7 +40,7 @@
 {
 	NSString *font = [[UIFont familyNames] objectAtIndex:indexPath.row];
 	[MAINLABEL setText:font];
-	[MAINLABEL setFont:[UIFont fontWithName:font size:18.0f]];
+	[MAINLABEL setFont:[UIFont fontWithName:font size:28.0f]];
 }
 
 - (void) loadView

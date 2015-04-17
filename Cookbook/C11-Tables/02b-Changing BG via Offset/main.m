@@ -41,7 +41,7 @@
 	if (!cell) 
 		cell = [[[UITableViewCell alloc] initWithStyle:style reuseIdentifier:@"BaseCell"] autorelease];
 	cell.textLabel.text = [[UIFont familyNames] objectAtIndex:indexPath.row];
-	cell.textLabel.textColor = [UIColor whiteColor];
+	//cell.textLabel.textColor = [UIColor whiteColor];
 	return cell;
 }
 
@@ -57,7 +57,7 @@
 	[super loadView];
 	self.navigationItem.titleView = [[[UILabel alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 200.0f, 30.0f)] autorelease];
 	[MAINLABEL setBackgroundColor:[UIColor clearColor]];
-	[MAINLABEL setTextColor:[UIColor whiteColor]];
+	//[MAINLABEL setTextColor:[UIColor whiteColor]];
 	[MAINLABEL setTextAlignment:UITextAlignmentCenter];
 }
 @end
