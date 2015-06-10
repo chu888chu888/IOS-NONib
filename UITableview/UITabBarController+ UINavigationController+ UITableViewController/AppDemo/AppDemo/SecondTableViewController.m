@@ -26,11 +26,11 @@
         self.navigationItem.prompt=@"向左边滑动每一条信息";
         self.navigationItem.title=@"删除标题演示";
         //在右侧添加按钮
-        UIBarButtonItem *rightItem=[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:nil action:nil];
+        UIBarButtonItem *rightItem=[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:nil action:nil];
         self.navigationItem.rightBarButtonItem=rightItem;
         //在左侧添加按钮
-        UIBarButtonItem *leftItem=[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks target:nil action:nil];
-        self.navigationItem.leftBarButtonItem=leftItem;
+        //UIBarButtonItem *leftItem=[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks target:nil action:nil];
+        //self.navigationItem.leftBarButtonItem=leftItem;
     }
     return self;
 }
