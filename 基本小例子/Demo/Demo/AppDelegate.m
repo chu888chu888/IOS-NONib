@@ -21,7 +21,20 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    	
+    NSArray *aArray=[NSArray arrayWithObjects:@"A",@"B",@"C", nil];
+    NSSet *aSet=[NSSet setWithObjects:@"A",@"B",@"C", nil];
+    
+    [aArray enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        if ([obj isKindOfClass:[NSString class]]) {
+            NSLog(@"index [%ld] has object [%@]",idx,obj);
+        }
+    }];
+    
+    [aSet enumerateObjectsUsingBlock:^(id obj, BOOL *stop) {
+        if ([obj isKindOfClass:[NSString class]]) {
+            NSLog(@"enumerate at object [%@]",(NSString *)obj);
+        }
+    }];
     
     
     
