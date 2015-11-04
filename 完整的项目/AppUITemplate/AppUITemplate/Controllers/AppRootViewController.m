@@ -9,6 +9,7 @@
 #import "AppRootViewController.h"
 #import "ConversationVC/ConversationViewController.h"
 #import "CommonVC/CommonNavigationViewController.h"
+#import "FriendListVC/FriendsViewController.h"
 @interface AppRootViewController ()
 
 @end
@@ -24,6 +25,13 @@
     [conversationVC.tabBarItem setSelectedImage:[UIImage imageNamed:@"tabbar_mainframeHL"]];
     CommonNavigationViewController *convNaVC=[[CommonNavigationViewController alloc]initWithRootViewController:conversationVC];
     [childVCArray addObject:convNaVC];
+    
+    FriendsViewController *friendVC=[[FriendsViewController alloc]init];
+    [friendVC.tabBarItem setTitle:@"通讯录"];
+    [friendVC.tabBarItem setImage:[UIImage imageNamed:@"tabbar_contacts"]];
+    [friendVC.tabBarItem setSelectedImage:[UIImage imageNamed:@"tabbar_contactsHL"]];
+    CommonNavigationViewController *friendNaVC=[[CommonNavigationViewController alloc]initWithRootViewController:friendVC];
+    [childVCArray addObject:friendNaVC];
     
     [self setViewControllers:childVCArray];
 }

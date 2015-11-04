@@ -12,6 +12,9 @@
 		B95CA7951BE34E2500FB0C56 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B95CA7931BE34E2500FB0C56 /* User.m */; };
 		B95CA7991BE34EDA00FB0C56 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B95CA7981BE34EDA00FB0C56 /* DetailsViewController.m */; };
 		B96A815D1BE8B0F0009FA2EB /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B96A815C1BE8B0F0009FA2EB /* ChatViewController.m */; };
+		B96A81601BE8BA41009FA2EB /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B96A815F1BE8BA41009FA2EB /* FriendsViewController.m */; };
+		B96A81641BE8BF63009FA2EB /* FriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B96A81631BE8BF63009FA2EB /* FriendCell.m */; };
+		B980E0C11BE9ED7C00FFE741 /* DataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B980E0C01BE9ED7C00FFE741 /* DataHelper.m */; };
 		B9C0631B1BE0CC2F00433F42 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C0631A1BE0CC2F00433F42 /* main.m */; };
 		B9C0631E1BE0CC2F00433F42 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C0631D1BE0CC2F00433F42 /* AppDelegate.m */; };
 		B9C063271BE0CC2F00433F42 /* AppUITemplate.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B9C063251BE0CC2F00433F42 /* AppUITemplate.xcdatamodeld */; };
@@ -60,6 +63,12 @@
 		B95CA7981BE34EDA00FB0C56 /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
 		B96A815B1BE8B0F0009FA2EB /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
 		B96A815C1BE8B0F0009FA2EB /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
+		B96A815E1BE8BA41009FA2EB /* FriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsViewController.h; sourceTree = "<group>"; };
+		B96A815F1BE8BA41009FA2EB /* FriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsViewController.m; sourceTree = "<group>"; };
+		B96A81621BE8BF63009FA2EB /* FriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendCell.h; sourceTree = "<group>"; };
+		B96A81631BE8BF63009FA2EB /* FriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendCell.m; sourceTree = "<group>"; };
+		B980E0BF1BE9ED7C00FFE741 /* DataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataHelper.h; path = Helper/DataHelper.h; sourceTree = SOURCE_ROOT; };
+		B980E0C01BE9ED7C00FFE741 /* DataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataHelper.m; path = Helper/DataHelper.m; sourceTree = SOURCE_ROOT; };
 		B9C063161BE0CC2F00433F42 /* AppUITemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppUITemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9C0631A1BE0CC2F00433F42 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B9C0631C1BE0CC2F00433F42 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -131,6 +140,8 @@
 			isa = PBXGroup;
 			children = (
 				B95CA78F1BE34C7200FB0C56 /* FriendSearchVC */,
+				B96A815E1BE8BA41009FA2EB /* FriendsViewController.h */,
+				B96A815F1BE8BA41009FA2EB /* FriendsViewController.m */,
 			);
 			name = FriendListVC;
 			path = Controllers/FriendListVC;
@@ -163,6 +174,15 @@
 			);
 			name = ChatVC;
 			path = Controllers/ChatVC;
+			sourceTree = "<group>";
+		};
+		B96A81611BE8BD3E009FA2EB /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				B96A81621BE8BF63009FA2EB /* FriendCell.h */,
+				B96A81631BE8BF63009FA2EB /* FriendCell.m */,
+			);
+			path = Friends;
 			sourceTree = "<group>";
 		};
 		B9C0630D1BE0CC2F00433F42 = {
@@ -231,6 +251,8 @@
 				B9FD20901BE2184E00784C96 /* common.m */,
 				B9FD20911BE2184E00784C96 /* enumerate.h */,
 				B9FD203D1BE1E59100784C96 /* macros.h */,
+				B980E0BF1BE9ED7C00FFE741 /* DataHelper.h */,
+				B980E0C01BE9ED7C00FFE741 /* DataHelper.m */,
 			);
 			name = Helper;
 			sourceTree = "<group>";
@@ -290,6 +312,7 @@
 		B9FD20731BE1F49600784C96 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B96A81611BE8BD3E009FA2EB /* Friends */,
 				B9FD20741BE1F49600784C96 /* Common */,
 				B9FD20751BE1F49600784C96 /* Conversation */,
 				B9FD20761BE1F49600784C96 /* Founction */,
@@ -467,6 +490,7 @@
 				B9FD20451BE1EB2400784C96 /* CommonTableViewController.m in Sources */,
 				B95CA7941BE34E2500FB0C56 /* TLSetting.m in Sources */,
 				B96A815D1BE8B0F0009FA2EB /* ChatViewController.m in Sources */,
+				B980E0C11BE9ED7C00FFE741 /* DataHelper.m in Sources */,
 				B9FD208B1BE217C400784C96 /* UIImage+TL.m in Sources */,
 				B95CA78E1BE34BB000FB0C56 /* FriendSearchViewController.m in Sources */,
 				B9FD208C1BE217C400784C96 /* UIView+TL.m in Sources */,
@@ -477,7 +501,9 @@
 				B9FD209E1BE219AD00784C96 /* ConversationCell.m in Sources */,
 				B9FD20791BE1F4C100784C96 /* CommonTableViewCell.m in Sources */,
 				B9C063271BE0CC2F00433F42 /* AppUITemplate.xcdatamodeld in Sources */,
+				B96A81641BE8BF63009FA2EB /* FriendCell.m in Sources */,
 				B95CA7951BE34E2500FB0C56 /* User.m in Sources */,
+				B96A81601BE8BA41009FA2EB /* FriendsViewController.m in Sources */,
 				B9C0631E1BE0CC2F00433F42 /* AppDelegate.m in Sources */,
 				B9FD20981BE2184E00784C96 /* common.m in Sources */,
 				B9FD204D1BE1EE0600784C96 /* CommonNavigationViewController.m in Sources */,
