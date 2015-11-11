@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		B95CA78E1BE34BB000FB0C56 /* FriendSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B95CA78D1BE34BB000FB0C56 /* FriendSearchViewController.m */; };
-		B95CA7941BE34E2500FB0C56 /* TLSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = B95CA7911BE34E2500FB0C56 /* TLSetting.m */; };
 		B95CA7951BE34E2500FB0C56 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B95CA7931BE34E2500FB0C56 /* User.m */; };
 		B95CA7991BE34EDA00FB0C56 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B95CA7981BE34EDA00FB0C56 /* DetailsViewController.m */; };
 		B96A815D1BE8B0F0009FA2EB /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B96A815C1BE8B0F0009FA2EB /* ChatViewController.m */; };
 		B96A81601BE8BA41009FA2EB /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B96A815F1BE8BA41009FA2EB /* FriendsViewController.m */; };
 		B96A81641BE8BF63009FA2EB /* FriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B96A81631BE8BF63009FA2EB /* FriendCell.m */; };
 		B980E0C11BE9ED7C00FFE741 /* DataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B980E0C01BE9ED7C00FFE741 /* DataHelper.m */; };
+		B9906FCE1BF317E000D2E3EF /* TLSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = B9906FCD1BF317E000D2E3EF /* TLSetting.m */; };
+		B9906FD11BF3394E00D2E3EF /* UIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B9906FD01BF3394E00D2E3EF /* UIHelper.m */; };
 		B9C0631B1BE0CC2F00433F42 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C0631A1BE0CC2F00433F42 /* main.m */; };
 		B9C0631E1BE0CC2F00433F42 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C0631D1BE0CC2F00433F42 /* AppDelegate.m */; };
 		B9C063271BE0CC2F00433F42 /* AppUITemplate.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B9C063251BE0CC2F00433F42 /* AppUITemplate.xcdatamodeld */; };
@@ -55,8 +56,6 @@
 /* Begin PBXFileReference section */
 		B95CA78C1BE34BB000FB0C56 /* FriendSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FriendSearchViewController.h; path = ../FriendSearchViewController.h; sourceTree = "<group>"; };
 		B95CA78D1BE34BB000FB0C56 /* FriendSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FriendSearchViewController.m; path = ../FriendSearchViewController.m; sourceTree = "<group>"; };
-		B95CA7901BE34E2500FB0C56 /* TLSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLSetting.h; sourceTree = "<group>"; };
-		B95CA7911BE34E2500FB0C56 /* TLSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLSetting.m; sourceTree = "<group>"; };
 		B95CA7921BE34E2500FB0C56 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		B95CA7931BE34E2500FB0C56 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		B95CA7971BE34EDA00FB0C56 /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
@@ -69,6 +68,10 @@
 		B96A81631BE8BF63009FA2EB /* FriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendCell.m; sourceTree = "<group>"; };
 		B980E0BF1BE9ED7C00FFE741 /* DataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataHelper.h; path = Helper/DataHelper.h; sourceTree = SOURCE_ROOT; };
 		B980E0C01BE9ED7C00FFE741 /* DataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataHelper.m; path = Helper/DataHelper.m; sourceTree = SOURCE_ROOT; };
+		B9906FCC1BF317E000D2E3EF /* TLSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLSetting.h; sourceTree = "<group>"; };
+		B9906FCD1BF317E000D2E3EF /* TLSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLSetting.m; sourceTree = "<group>"; };
+		B9906FCF1BF3394E00D2E3EF /* UIHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIHelper.h; sourceTree = "<group>"; };
+		B9906FD01BF3394E00D2E3EF /* UIHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIHelper.m; sourceTree = "<group>"; };
 		B9C063161BE0CC2F00433F42 /* AppUITemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppUITemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9C0631A1BE0CC2F00433F42 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B9C0631C1BE0CC2F00433F42 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -247,6 +250,8 @@
 		B9FD203B1BE1E53B00784C96 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				B9906FCF1BF3394E00D2E3EF /* UIHelper.h */,
+				B9906FD01BF3394E00D2E3EF /* UIHelper.m */,
 				B9FD208F1BE2184E00784C96 /* common.h */,
 				B9FD20901BE2184E00784C96 /* common.m */,
 				B9FD20911BE2184E00784C96 /* enumerate.h */,
@@ -389,8 +394,8 @@
 		B9FD209F1BE21B6A00784C96 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B95CA7901BE34E2500FB0C56 /* TLSetting.h */,
-				B95CA7911BE34E2500FB0C56 /* TLSetting.m */,
+				B9906FCC1BF317E000D2E3EF /* TLSetting.h */,
+				B9906FCD1BF317E000D2E3EF /* TLSetting.m */,
 				B95CA7921BE34E2500FB0C56 /* User.h */,
 				B95CA7931BE34E2500FB0C56 /* User.m */,
 				B9FD20A01BE21B9200784C96 /* Conversation.h */,
@@ -488,11 +493,11 @@
 				B9C063391BE0CD0500433F42 /* AppRootViewController.m in Sources */,
 				B9FD20491BE1EC0100784C96 /* ConversationViewController.m in Sources */,
 				B9FD20451BE1EB2400784C96 /* CommonTableViewController.m in Sources */,
-				B95CA7941BE34E2500FB0C56 /* TLSetting.m in Sources */,
 				B96A815D1BE8B0F0009FA2EB /* ChatViewController.m in Sources */,
 				B980E0C11BE9ED7C00FFE741 /* DataHelper.m in Sources */,
 				B9FD208B1BE217C400784C96 /* UIImage+TL.m in Sources */,
 				B95CA78E1BE34BB000FB0C56 /* FriendSearchViewController.m in Sources */,
+				B9906FD11BF3394E00D2E3EF /* UIHelper.m in Sources */,
 				B9FD208C1BE217C400784C96 /* UIView+TL.m in Sources */,
 				B9FD208A1BE217C400784C96 /* UIDevice+TL.m in Sources */,
 				B9FD20891BE217C400784C96 /* NSString+TL.m in Sources */,
@@ -502,6 +507,7 @@
 				B9FD20791BE1F4C100784C96 /* CommonTableViewCell.m in Sources */,
 				B9C063271BE0CC2F00433F42 /* AppUITemplate.xcdatamodeld in Sources */,
 				B96A81641BE8BF63009FA2EB /* FriendCell.m in Sources */,
+				B9906FCE1BF317E000D2E3EF /* TLSetting.m in Sources */,
 				B95CA7951BE34E2500FB0C56 /* User.m in Sources */,
 				B96A81601BE8BA41009FA2EB /* FriendsViewController.m in Sources */,
 				B9C0631E1BE0CC2F00433F42 /* AppDelegate.m in Sources */,

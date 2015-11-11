@@ -9,9 +9,14 @@
 #import "FriendsViewController.h"
 #import "FriendCell.h"
 #import "DataHelper.h"
+#import "TLSetting.h"
+#import "UIHelper.h"
 @interface FriendsViewController ()
 @property(nonatomic,strong) UILabel *footerLabel;
 @property(nonatomic,strong) UIBarButtonItem *addFriendButton;
+//功能列表
+@property (nonatomic, strong) SettingGrounp *functionGroup;
+
 @end
 
 @implementation FriendsViewController
@@ -22,6 +27,9 @@
     [self setHidesBottomBarWhenPushed:NO];
     [self.tableView setShowsVerticalScrollIndicator:NO];
     [self.tableView registerClass:[FriendCell class] forCellReuseIdentifier:@"FriendCell"];
+    
+    [self initSubViews];
+    [self initTestData];
     
 }
 - (void) addFriendButtonDown
@@ -94,9 +102,10 @@
         user7.avatarURL = [NSURL URLWithString:@"10.jpeg"];
         [_friendsArray addObject:user7];
         
-        
+        _functionGroup=[UIHelper getFriensListItemsGroup];
         _data = [DataHelper getFriendListDataBy:_friendsArray];
         _section = [DataHelper getFriendListSectionBy:_data];
+        
         
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.tableView reloadData];
@@ -104,7 +113,58 @@
         });
     });
 }
-
+#pragma mark -UITableView
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return _data.count+1;
+}
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    if (section==0) {
+        return _functionGroup.itemsCount;
+    }
+    NSArray *array=[_data objectAtIndex:section-1];
+    return array.count;
+    
+}
+- (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    FriendCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FriendCell"];
+    if (indexPath.section == 0) {
+        SettingItem *item = [_functionGroup itemAtIndex:indexPath.row];
+        User *user = [[User alloc] init];
+        user.username = item.title;
+        user.avatarURL = [NSURL URLWithString:item.imageName];
+        [cell setUser:user];
+        [cell setTopLineStyle:CellLineStyleNone];
+        if (indexPath.row == _functionGroup.itemsCount - 1) {
+            [cell setBottomLineStyle:CellLineStyleNone];
+        }
+        else {
+            [cell setBottomLineStyle:CellLineStyleDefault];
+        }
+    }
+    else {
+        NSArray *array = [_data objectAtIndex:indexPath.section - 1];
+        User *user = [array objectAtIndex:indexPath.row];
+        [cell setUser:user];
+        [cell setTopLineStyle:CellLineStyleNone];
+        
+        if (indexPath.row == array.count - 1) {
+            if (indexPath.section == _data.count) {
+                [cell setBottomLineStyle:CellLineStyleFill];
+            }
+            else {
+                [cell setBottomLineStyle:CellLineStyleNone];
+            }
+        }
+        else {
+            [cell setBottomLineStyle:CellLineStyleDefault];
+        }
+    }
+    
+    return cell;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

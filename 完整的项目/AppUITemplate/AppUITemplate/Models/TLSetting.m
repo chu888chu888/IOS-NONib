@@ -8,7 +8,7 @@
 
 #import "TLSetting.h"
 
-@implementation TLSettingItem
+@implementation SettingItem
 
 - (id) initWithTitle:(NSString *)title
 {
@@ -20,7 +20,7 @@
 return [self initWithTitle:title subTitle:nil imageName:nil subImageName:subImageName type:TLSettingItemTypeDefault];
 }
 
-- (id) initWithTitle:(NSString *)title type:(TLSettingItemType)type
+- (id) initWithTitle:(NSString *)title type:(SettingItemType)type
 {
     return [self initWithTitle:title subTitle:nil imageName:nil subImageName:nil type:type];
 }
@@ -41,12 +41,12 @@ return [self initWithTitle:title subTitle:nil imageName:nil subImageName:subImag
     return [self initWithTitle:title subTitle:subTitle imageName:nil subImageName:nil type:TLSettingItemTypeDefault];
 }
 
-- (id) initWithTitle:(NSString *)title subTitle:(NSString *)subTitle type:(TLSettingItemType)type
+- (id) initWithTitle:(NSString *)title subTitle:(NSString *)subTitle type:(SettingItemType)type
 {
     return [self initWithTitle:title subTitle:subTitle imageName:nil subImageName:nil type:type];
 }
 
-- (id) initWithTitle:(NSString *)title subImageName:(NSString *)subImageName type:(TLSettingItemType)type
+- (id) initWithTitle:(NSString *)title subImageName:(NSString *)subImageName type:(SettingItemType)type
 {
     return [self initWithTitle:title subTitle:nil imageName:nil subImageName:subImageName type:type];
 }
@@ -56,7 +56,7 @@ return [self initWithTitle:title subTitle:nil imageName:nil subImageName:subImag
     return [self initWithTitle:title subTitle:subTitle imageName:imageName subImageName:subImageName type:TLSettingItemTypeDefault];
 }
 
-- (id) initWithTitle:(NSString *)title subTitle:(NSString *)subTitle imageName:(NSString *)imageName subImageName:(NSString *)subImageName type:(TLSettingItemType)type
+- (id) initWithTitle:(NSString *)title subTitle:(NSString *)subTitle imageName:(NSString *)imageName subImageName:(NSString *)subImageName type:(SettingItemType)type
 {
     if (self = [super init]) {
         _title = title;
@@ -69,7 +69,7 @@ return [self initWithTitle:title subTitle:nil imageName:nil subImageName:subImag
     return self;
 }
 
-- (id) initWithTitle:(NSString *)title subTitle:(NSString *)subTitle imageName:(NSString *)imageName subImageURL:(NSURL *)subImageURL type:(TLSettingItemType)type
+- (id) initWithTitle:(NSString *)title subTitle:(NSString *)subTitle imageName:(NSString *)imageName subImageURL:(NSURL *)subImageURL type:(SettingItemType)type
 {
     if (self = [super init]) {
         _title = title;
@@ -85,9 +85,9 @@ return [self initWithTitle:title subTitle:nil imageName:nil subImageName:subImag
 @end
 
 
-@implementation TLSettingGrounp
+@implementation SettingGrounp
 
-- (id) initWithHeaderTitle:(NSString *)headerTitle footerTitle:(NSString *)footerTitle settingItems:(TLSettingItem *)firstObj, ...
+- (id) initWithHeaderTitle:(NSString *)headerTitle footerTitle:(NSString *)footerTitle settingItems:(SettingItem *)firstObj, ...
 {
     if (self = [super init]) {
         _headerTitle = headerTitle;
@@ -107,7 +107,7 @@ return [self initWithTitle:title subTitle:nil imageName:nil subImageName:subImag
     return self;
 }
 
-- (TLSettingItem *) itemAtIndex:(NSUInteger)index
+- (SettingItem *) itemAtIndex:(NSUInteger)index
 {
     return [_items objectAtIndex:index];
 }
