@@ -11,12 +11,14 @@
 #import "DataHelper.h"
 #import "TLSetting.h"
 #import "UIHelper.h"
-@interface FriendsViewController ()
+#import "FriendSearchViewController.h"
+@interface FriendsViewController ()<UISearchBarDelegate>
 @property(nonatomic,strong) UILabel *footerLabel;
 @property(nonatomic,strong) UIBarButtonItem *addFriendButton;
 //功能列表
 @property (nonatomic, strong) SettingGrounp *functionGroup;
-
+@property (nonatomic, strong) UISearchController *searchController;
+@property (nonatomic, strong) FriendSearchViewController *searchVC;
 @end
 
 @implementation FriendsViewController
@@ -55,6 +57,19 @@
     [_footerLabel setTextColor:[UIColor grayColor]];
     [_footerLabel setTextAlignment:NSTextAlignmentCenter];
     [self.tableView setTableFooterView:_footerLabel];
+    
+    
+    // 搜索
+    _searchVC = [[FriendSearchViewController alloc] init];
+    _searchController = [[UISearchController alloc] initWithSearchResultsController:_searchVC];
+    [_searchController setSearchResultsUpdater: _searchVC];
+    [_searchController.searchBar setPlaceholder:@"搜索"];
+    [_searchController.searchBar setBarTintColor:DEFAULT_SEARCHBAR_COLOR];
+    [_searchController.searchBar sizeToFit];
+    [_searchController.searchBar setDelegate:self];
+    [_searchController.searchBar.layer setBorderWidth:0.5f];
+    [_searchController.searchBar.layer setBorderColor:[UIColor colorWithRed:220.0/255.0 green:220.0/255.0 blue:220.0/255.0 alpha:1.0].CGColor];
+    [self.tableView setTableHeaderView:_searchController.searchBar];
 }
 
 - (void) initTestData
@@ -136,6 +151,9 @@
         user.username = item.title;
         user.avatarURL = [NSURL URLWithString:item.imageName];
         [cell setUser:user];
+        
+
+        /*
         [cell setTopLineStyle:CellLineStyleNone];
         if (indexPath.row == _functionGroup.itemsCount - 1) {
             [cell setBottomLineStyle:CellLineStyleNone];
@@ -143,13 +161,14 @@
         else {
             [cell setBottomLineStyle:CellLineStyleDefault];
         }
+         */
     }
     else {
         NSArray *array = [_data objectAtIndex:indexPath.section - 1];
         User *user = [array objectAtIndex:indexPath.row];
         [cell setUser:user];
-        [cell setTopLineStyle:CellLineStyleNone];
         
+        /*
         if (indexPath.row == array.count - 1) {
             if (indexPath.section == _data.count) {
                 [cell setBottomLineStyle:CellLineStyleFill];
@@ -161,14 +180,71 @@
         else {
             [cell setBottomLineStyle:CellLineStyleDefault];
         }
+        */
+        
     }
-    
+    [cell setTopLineStyle:CellLineStyleNone];
+    [cell setBottomLineStyle:CellLineStyleNone];
     return cell;
+}
+
+- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 54.5f;
+}
+- (CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    if (section == 0) {
+        return 0;
+    }
+    return 22.0f;
+}
+//标签
+- (UIView *) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    if (section == 0) {
+        return nil;
+    }
+    id label = [tableView dequeueReusableHeaderFooterViewWithIdentifier:@"headerView"];
+    if (label == nil) {
+        label = [[UILabel alloc] init];
+        [label setFont:[UIFont systemFontOfSize:14.5f]];
+        [label setTextColor:[UIColor grayColor]];
+        [label setBackgroundColor:DEFAULT_BACKGROUND_COLOR];
+    }
+    [label setText:[NSString stringWithFormat:@"  %@", [_section objectAtIndex:section]]];
+    return label;
+}
+//索引
+- (NSArray *) sectionIndexTitlesForTableView:(UITableView *)tableView
+{
+    return _section;
+}
+- (NSInteger) tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index
+{
+    if(index == 0) {
+        [self.tableView scrollRectToVisible:_searchController.searchBar.frame animated:NO];
+        return -1;
+    }
+    else {
+        return index - 1;
+    }
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+#pragma mark - UISearchBarDelegate
 
+- (void) searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
+{
+    _searchVC.friendsArray = self.friendsArray;
+    [self.tabBarController.tabBar setHidden:YES];
+}
+
+- (void) searchBarCancelButtonClicked:(UISearchBar *)searchBar
+{
+    [self.tabBarController.tabBar setHidden:NO];
+}
 
 @end

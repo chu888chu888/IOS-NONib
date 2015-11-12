@@ -107,6 +107,8 @@
 {
     ConversationCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ConversationCell"];
     [cell setConversation:_data[indexPath.row]];
+    
+    /*
     [cell setTopLineStyle:CellLineStyleNone];
     if (indexPath.row == _data.count - 1) {
         [cell setBottomLineStyle:CellLineStyleFill];
@@ -114,6 +116,9 @@
     else {
         [cell setBottomLineStyle:CellLineStyleDefault];
     }
+    */
+    [cell setTopLineStyle:CellLineStyleNone];
+    [cell setBottomLineStyle:CellLineStyleNone];
     return cell;
 }
 

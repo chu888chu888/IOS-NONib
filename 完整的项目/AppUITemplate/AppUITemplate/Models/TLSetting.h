@@ -1,9 +1,6 @@
 //
 //  TLSetting.h
 //  iOSAppTemplate
-//
-
-//
 
 #import <Foundation/Foundation.h>
 
