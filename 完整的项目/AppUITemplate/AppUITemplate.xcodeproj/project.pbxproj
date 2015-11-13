@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B911F85C1BF5BD85009CFA47 /* ConversationSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B911F85B1BF5BD85009CFA47 /* ConversationSearchViewController.m */; };
 		B95CA78E1BE34BB000FB0C56 /* FriendSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B95CA78D1BE34BB000FB0C56 /* FriendSearchViewController.m */; };
 		B95CA7951BE34E2500FB0C56 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B95CA7931BE34E2500FB0C56 /* User.m */; };
 		B95CA7991BE34EDA00FB0C56 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B95CA7981BE34EDA00FB0C56 /* DetailsViewController.m */; };
@@ -54,6 +55,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B911F85A1BF5BD85009CFA47 /* ConversationSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversationSearchViewController.h; sourceTree = "<group>"; };
+		B911F85B1BF5BD85009CFA47 /* ConversationSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversationSearchViewController.m; sourceTree = "<group>"; };
 		B95CA78C1BE34BB000FB0C56 /* FriendSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FriendSearchViewController.h; path = ../FriendSearchViewController.h; sourceTree = "<group>"; };
 		B95CA78D1BE34BB000FB0C56 /* FriendSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FriendSearchViewController.m; path = ../FriendSearchViewController.m; sourceTree = "<group>"; };
 		B95CA7921BE34E2500FB0C56 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
@@ -139,6 +142,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B911F8591BF5BC84009CFA47 /* ConversationSearchVC */ = {
+			isa = PBXGroup;
+			children = (
+				B911F85A1BF5BD85009CFA47 /* ConversationSearchViewController.h */,
+				B911F85B1BF5BD85009CFA47 /* ConversationSearchViewController.m */,
+			);
+			name = ConversationSearchVC;
+			path = Controllers/ConversationVC/ConversationSearchVC;
+			sourceTree = "<group>";
+		};
 		B95CA78B1BE34B8B00FB0C56 /* FriendListVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -278,6 +291,7 @@
 		B9FD204A1BE1EC0800784C96 /* ConversationVC */ = {
 			isa = PBXGroup;
 			children = (
+				B911F8591BF5BC84009CFA47 /* ConversationSearchVC */,
 				B9FD20471BE1EC0100784C96 /* ConversationViewController.h */,
 				B9FD20481BE1EC0100784C96 /* ConversationViewController.m */,
 			);
@@ -509,6 +523,7 @@
 				B96A81641BE8BF63009FA2EB /* FriendCell.m in Sources */,
 				B9906FCE1BF317E000D2E3EF /* TLSetting.m in Sources */,
 				B95CA7951BE34E2500FB0C56 /* User.m in Sources */,
+				B911F85C1BF5BD85009CFA47 /* ConversationSearchViewController.m in Sources */,
 				B96A81601BE8BA41009FA2EB /* FriendsViewController.m in Sources */,
 				B9C0631E1BE0CC2F00433F42 /* AppDelegate.m in Sources */,
 				B9FD20981BE2184E00784C96 /* common.m in Sources */,

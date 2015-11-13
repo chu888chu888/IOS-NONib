@@ -9,12 +9,13 @@
 #import "ConversationViewController.h"
 #import "ConversationCell.h"
 #import "FriendSearchViewController.h"
+#import "ConversationSearchVC/ConversationSearchViewController.h"
 #import "ChatViewController.h"
 #import "User.h"
 @interface ConversationViewController ()<UISearchBarDelegate>
 @property(nonatomic,strong) UIBarButtonItem *navRightButton;
 @property(nonatomic,strong) UISearchController *searchController;
-@property(nonatomic,strong) FriendSearchViewController *searchVC;
+@property(nonatomic,strong) ConversationSearchViewController *searchVC;
 @property(nonatomic,strong) ChatViewController *chatVC;
 @end
 
@@ -47,7 +48,7 @@
     [self.tableView.layer setBackgroundColor:[UIColor whiteColor].CGColor];
     
     //搜索条的加入
-    _searchVC=[[FriendSearchViewController alloc] init];
+    _searchVC=[[ConversationSearchViewController alloc] init];
     _searchController=[[UISearchController alloc]initWithSearchResultsController:_searchVC];
     [_searchController setSearchResultsUpdater:_searchVC];
     [_searchController.searchBar setPlaceholder:@"搜索"];
@@ -68,19 +69,35 @@
     
     Conversation *item1 = [[Conversation alloc] init];
     item1.from = [NSString stringWithFormat:@"莫小贝"];
-    item1.message = @"帅哥你好！！";
-    item1.avatarURL = [NSURL URLWithString:@"10.jpeg"];
+    item1.message = @"s";
+    item1.avatarURL = [NSURL URLWithString:@"0.jpg"];
     item1.messageCount = 0;
     item1.date = [NSDate date];
     [models addObject:item1];
     
     Conversation *item2 = [[Conversation alloc] init];
     item2.from = [NSString stringWithFormat:@"楚广明"];
-    item2.message = @"帅哥你好！！";
+    item2.message = @"b";
     item2.avatarURL = [NSURL URLWithString:@"10.jpeg"];
     item2.messageCount = 0;
     item2.date = [NSDate date];
     [models addObject:item2];
+    
+    Conversation *item3 = [[Conversation alloc] init];
+    item3.from = [NSString stringWithFormat:@"楚多多"];
+    item3.message = @"a";
+    item3.avatarURL = [NSURL URLWithString:@"1.jpg"];
+    item3.messageCount = 0;
+    item3.date = [NSDate date];
+    [models addObject:item3];
+    
+    Conversation *item4 = [[Conversation alloc] init];
+    item4.from = [NSString stringWithFormat:@"张梦瑶"];
+    item4.message = @"c";
+    item4.avatarURL = [NSURL URLWithString:@"8.jpg"];
+    item4.messageCount = 0;
+    item4.date = [NSDate date];
+    [models addObject:item4];
     
     return models;
 }
@@ -174,6 +191,7 @@
 
 - (void) searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
 {
+    _searchVC.ConversationsArray = self.data;
     [self.tabBarController.tabBar setHidden:YES];
 }
 
