@@ -69,7 +69,7 @@
     
     Conversation *item1 = [[Conversation alloc] init];
     item1.from = [NSString stringWithFormat:@"莫小贝"];
-    item1.message = @"s";
+    item1.message = @"今天晚上吃什么?";
     item1.avatarURL = [NSURL URLWithString:@"0.jpg"];
     item1.messageCount = 0;
     item1.date = [NSDate date];
@@ -77,7 +77,7 @@
     
     Conversation *item2 = [[Conversation alloc] init];
     item2.from = [NSString stringWithFormat:@"楚广明"];
-    item2.message = @"b";
+    item2.message = @"听说恐怖分子袭击了法国";
     item2.avatarURL = [NSURL URLWithString:@"10.jpeg"];
     item2.messageCount = 0;
     item2.date = [NSDate date];
@@ -85,7 +85,7 @@
     
     Conversation *item3 = [[Conversation alloc] init];
     item3.from = [NSString stringWithFormat:@"楚多多"];
-    item3.message = @"a";
+    item3.message = @"ISIS就是一群禽兽";
     item3.avatarURL = [NSURL URLWithString:@"1.jpg"];
     item3.messageCount = 0;
     item3.date = [NSDate date];
@@ -93,7 +93,7 @@
     
     Conversation *item4 = [[Conversation alloc] init];
     item4.from = [NSString stringWithFormat:@"张梦瑶"];
-    item4.message = @"c";
+    item4.message = @"法国怒了";
     item4.avatarURL = [NSURL URLWithString:@"8.jpg"];
     item4.messageCount = 0;
     item4.date = [NSDate date];

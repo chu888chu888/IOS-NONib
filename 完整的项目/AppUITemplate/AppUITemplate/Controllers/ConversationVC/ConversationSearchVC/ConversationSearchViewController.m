@@ -86,7 +86,7 @@
     NSString *searchText = searchController.searchBar.text;
     [_data removeAllObjects];
     for (Conversation *user in _ConversationsArray) {
-        if ([user.message containsString:searchText] || [user.from containsString:searchText] || [user.from containsString:searchText]) {
+        if ([user.message containsString:searchText] || [user.from containsString:searchText]) {
             [_data addObject:user];
         }
     }

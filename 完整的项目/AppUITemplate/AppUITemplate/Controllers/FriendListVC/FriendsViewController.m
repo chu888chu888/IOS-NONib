@@ -12,6 +12,7 @@
 #import "TLSetting.h"
 #import "UIHelper.h"
 #import "FriendSearchViewController.h"
+#import "DetailsViewController.h"
 @interface FriendsViewController ()<UISearchBarDelegate>
 @property(nonatomic,strong) UILabel *footerLabel;
 @property(nonatomic,strong) UIBarButtonItem *addFriendButton;
@@ -19,6 +20,7 @@
 @property (nonatomic, strong) SettingGrounp *functionGroup;
 @property (nonatomic, strong) UISearchController *searchController;
 @property (nonatomic, strong) FriendSearchViewController *searchVC;
+@property (nonatomic, strong) DetailsViewController *detailVC;
 @end
 
 @implementation FriendsViewController
@@ -151,41 +153,34 @@
         user.username = item.title;
         user.avatarURL = [NSURL URLWithString:item.imageName];
         [cell setUser:user];
-        
 
-        /*
-        [cell setTopLineStyle:CellLineStyleNone];
-        if (indexPath.row == _functionGroup.itemsCount - 1) {
-            [cell setBottomLineStyle:CellLineStyleNone];
-        }
-        else {
-            [cell setBottomLineStyle:CellLineStyleDefault];
-        }
-         */
     }
     else {
         NSArray *array = [_data objectAtIndex:indexPath.section - 1];
         User *user = [array objectAtIndex:indexPath.row];
         [cell setUser:user];
-        
-        /*
-        if (indexPath.row == array.count - 1) {
-            if (indexPath.section == _data.count) {
-                [cell setBottomLineStyle:CellLineStyleFill];
-            }
-            else {
-                [cell setBottomLineStyle:CellLineStyleNone];
-            }
-        }
-        else {
-            [cell setBottomLineStyle:CellLineStyleDefault];
-        }
-        */
-        
+       
     }
     [cell setTopLineStyle:CellLineStyleNone];
     [cell setBottomLineStyle:CellLineStyleNone];
     return cell;
+}
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section==0) {
+        
+    }
+    else
+    {
+        if (_detailVC==nil) {
+            _detailVC=[[DetailsViewController alloc] init];
+        }
+        NSArray *array=[_data objectAtIndex:indexPath.section-1];
+        _detailVC.user=[array objectAtIndex:indexPath.row];
+        [self setHidesBottomBarWhenPushed:YES];
+        [self.navigationController pushViewController:_detailVC animated:YES];
+    }
+    [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

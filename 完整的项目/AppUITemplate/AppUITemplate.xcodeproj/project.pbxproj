@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B90BDF471BFDB72D00A8F4E5 /* DetailsSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B90BDF461BFDB72D00A8F4E5 /* DetailsSettingViewController.m */; };
+		B90BDF4B1BFDB7B300A8F4E5 /* UserDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B90BDF4A1BFDB7B300A8F4E5 /* UserDetailCell.m */; };
+		B90BDF4E1BFDB7DD00A8F4E5 /* FounctionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B90BDF4D1BFDB7DD00A8F4E5 /* FounctionCell.m */; };
 		B911F85C1BF5BD85009CFA47 /* ConversationSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B911F85B1BF5BD85009CFA47 /* ConversationSearchViewController.m */; };
 		B95CA78E1BE34BB000FB0C56 /* FriendSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B95CA78D1BE34BB000FB0C56 /* FriendSearchViewController.m */; };
 		B95CA7951BE34E2500FB0C56 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B95CA7931BE34E2500FB0C56 /* User.m */; };
@@ -55,6 +58,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B90BDF451BFDB72D00A8F4E5 /* DetailsSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsSettingViewController.h; sourceTree = "<group>"; };
+		B90BDF461BFDB72D00A8F4E5 /* DetailsSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsSettingViewController.m; sourceTree = "<group>"; };
+		B90BDF491BFDB7B300A8F4E5 /* UserDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDetailCell.h; sourceTree = "<group>"; };
+		B90BDF4A1BFDB7B300A8F4E5 /* UserDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDetailCell.m; sourceTree = "<group>"; };
+		B90BDF4C1BFDB7DD00A8F4E5 /* FounctionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FounctionCell.h; sourceTree = "<group>"; };
+		B90BDF4D1BFDB7DD00A8F4E5 /* FounctionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FounctionCell.m; sourceTree = "<group>"; };
 		B911F85A1BF5BD85009CFA47 /* ConversationSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversationSearchViewController.h; sourceTree = "<group>"; };
 		B911F85B1BF5BD85009CFA47 /* ConversationSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversationSearchViewController.m; sourceTree = "<group>"; };
 		B95CA78C1BE34BB000FB0C56 /* FriendSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FriendSearchViewController.h; path = ../FriendSearchViewController.h; sourceTree = "<group>"; };
@@ -142,6 +151,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B90BDF481BFDB78600A8F4E5 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				B90BDF491BFDB7B300A8F4E5 /* UserDetailCell.h */,
+				B90BDF4A1BFDB7B300A8F4E5 /* UserDetailCell.m */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 		B911F8591BF5BC84009CFA47 /* ConversationSearchVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +195,8 @@
 			children = (
 				B95CA7971BE34EDA00FB0C56 /* DetailsViewController.h */,
 				B95CA7981BE34EDA00FB0C56 /* DetailsViewController.m */,
+				B90BDF451BFDB72D00A8F4E5 /* DetailsSettingViewController.h */,
+				B90BDF461BFDB72D00A8F4E5 /* DetailsSettingViewController.m */,
 			);
 			name = DetailsVC;
 			path = Controllers/DetailsVC;
@@ -331,6 +351,7 @@
 		B9FD20731BE1F49600784C96 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B90BDF481BFDB78600A8F4E5 /* Detail */,
 				B96A81611BE8BD3E009FA2EB /* Friends */,
 				B9FD20741BE1F49600784C96 /* Common */,
 				B9FD20751BE1F49600784C96 /* Conversation */,
@@ -360,6 +381,8 @@
 		B9FD20761BE1F49600784C96 /* Founction */ = {
 			isa = PBXGroup;
 			children = (
+				B90BDF4C1BFDB7DD00A8F4E5 /* FounctionCell.h */,
+				B90BDF4D1BFDB7DD00A8F4E5 /* FounctionCell.m */,
 			);
 			path = Founction;
 			sourceTree = "<group>";
@@ -519,6 +542,7 @@
 				B9FD208D1BE217C400784C96 /* iOSAppTemplate.xcdatamodeld in Sources */,
 				B9FD209E1BE219AD00784C96 /* ConversationCell.m in Sources */,
 				B9FD20791BE1F4C100784C96 /* CommonTableViewCell.m in Sources */,
+				B90BDF4E1BFDB7DD00A8F4E5 /* FounctionCell.m in Sources */,
 				B9C063271BE0CC2F00433F42 /* AppUITemplate.xcdatamodeld in Sources */,
 				B96A81641BE8BF63009FA2EB /* FriendCell.m in Sources */,
 				B9906FCE1BF317E000D2E3EF /* TLSetting.m in Sources */,
@@ -528,6 +552,8 @@
 				B9C0631E1BE0CC2F00433F42 /* AppDelegate.m in Sources */,
 				B9FD20981BE2184E00784C96 /* common.m in Sources */,
 				B9FD204D1BE1EE0600784C96 /* CommonNavigationViewController.m in Sources */,
+				B90BDF4B1BFDB7B300A8F4E5 /* UserDetailCell.m in Sources */,
+				B90BDF471BFDB72D00A8F4E5 /* DetailsSettingViewController.m in Sources */,
 				B95CA7991BE34EDA00FB0C56 /* DetailsViewController.m in Sources */,
 				B9C0631B1BE0CC2F00433F42 /* main.m in Sources */,
 				B9FD20721BE1F02100784C96 /* CommonViewController.m in Sources */,

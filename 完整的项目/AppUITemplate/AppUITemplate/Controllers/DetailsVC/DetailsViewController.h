@@ -7,7 +7,7 @@
 //
 
 #import "CommonTableViewController.h"
-
+#import "User.h"
 @interface DetailsViewController : CommonTableViewController
-
+@property(nonatomic,strong) User *user;
 @end
