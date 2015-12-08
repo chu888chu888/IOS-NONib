@@ -73,7 +73,8 @@
     SettingGrounp *group1 = [[SettingGrounp alloc] initWithHeaderTitle:nil footerTitle:nil settingItems:tag, phone, nil];
     [items addObject:group1];
     SettingItem *position = [[SettingItem alloc] initWithTitle:@"地区" subTitle:@"山东 青岛" type:TLSettingItemTypeLeft];
-    SettingItem *album = [[SettingItem alloc] initWithTitle:@"个人相册" subImages:[NSMutableArray arrayWithObjects:@"1.jpg", @"2.jpg", @"8.jpg", @"0.jpg", nil]];
+    SettingItem *album =
+    [[SettingItem alloc] initWithTitle:@"个人相册" subImages:[NSMutableArray arrayWithObjects:@"1.jpg", @"2.jpg", @"8.jpg", @"0.jpg", nil]];
     SettingItem *more = [[SettingItem alloc] initWithTitle:@"更多" type:TLSettingItemTypeLeft];
     SettingGrounp *group2 = [[SettingGrounp alloc] initWithHeaderTitle:nil footerTitle:nil settingItems:position, album, more, nil];
     [items addObject:group2];

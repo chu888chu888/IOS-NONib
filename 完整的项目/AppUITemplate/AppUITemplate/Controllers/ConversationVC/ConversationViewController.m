@@ -12,6 +12,9 @@
 #import "ConversationSearchVC/ConversationSearchViewController.h"
 #import "ChatViewController.h"
 #import "User.h"
+#import "FontAwesomeKit.h"
+#import "CalendarViewController.h"
+
 @interface ConversationViewController ()<UISearchBarDelegate>
 @property(nonatomic,strong) UIBarButtonItem *navRightButton;
 @property(nonatomic,strong) UISearchController *searchController;
@@ -42,6 +45,34 @@
     //右边导航条按钮
     _navRightButton=[[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"barbuttonicon_add"] style:UIBarButtonItemStylePlain target:self action:@selector(navRightButtonDown)];
     [self.navigationItem setRightBarButtonItem:_navRightButton];
+    
+    //采用FontAwesomeKit做为Icon
+    //FAKFontAwesome具体参考http://fontawesome.dashgame.com
+    //FAKFoundationIcons参考http://zurb.com/playground/foundation-icon-fonts-3
+    //FAKIonIcons参考http://ionicons.com
+    //FAKMaterialIcons参考https://google.github.io/material-design-icons/
+    //FAKOcticons参考https://octicons.github.com
+    //FAKZocial参考http://zocial.smcllns.com
+    
+    //FAKFontAwesome *cogIcon = [FAKFontAwesome cogIconWithSize:20];
+    //FAKFoundationIcons *cogIcon=[FAKFoundationIcons downloadIconWithSize:20];
+    //FAKIonIcons *cogIcon=[FAKIonIcons manIconWithSize:30 ];
+    //FAKOcticons *cogIcon=[FAKOcticons browserIconWithSize:20];
+    FAKMaterialIcons *cogIcon=[FAKMaterialIcons alarmIconWithSize:20];
+    [cogIcon addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor]];
+    UIImage *leftImage = [cogIcon imageWithSize:CGSizeMake(20, 20)];
+    cogIcon.iconFontSize = 15;
+    UIImage *leftLandscapeImage = [cogIcon imageWithSize:CGSizeMake(15, 15)];
+    self.navigationItem.leftBarButtonItem =
+    [[UIBarButtonItem alloc] initWithImage:leftImage
+                       landscapeImagePhone:leftLandscapeImage
+                                     style:UIBarButtonItemStylePlain
+                                    target:self
+                                    action:@selector(navLeftButtonDown)];
+    
+    
+    
+    
     //设置列表风格样式
     [self.tableView setSeparatorStyle: UITableViewCellSeparatorStyleNone];
     //设置背景颜色
@@ -105,6 +136,16 @@
 - (void) navRightButtonDown
 {
     
+}
+- (void) navLeftButtonDown
+{
+    
+    CalendarViewController *calendarVC=[[CalendarViewController alloc] init];
+    
+    [self setHidesBottomBarWhenPushed:YES];
+    
+    [self.navigationController pushViewController:calendarVC animated:YES];
+
 }
 
 

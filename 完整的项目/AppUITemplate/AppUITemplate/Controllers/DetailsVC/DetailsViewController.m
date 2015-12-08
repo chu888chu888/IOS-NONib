@@ -23,16 +23,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSLog(@"user:%@",_user.username);
+    //NSLog(@"user:%@",_user.username);
     [self.navigationItem setTitle:@"详细资料"];
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     UIView *view=[[UIView alloc] initWithFrame:CGRectMake(0, 0, WIDTH_SCREEN, 15.0f)];
+    
     [self.tableView setTableHeaderView:view];
     [self.tableView registerClass:[FounctionCell class] forCellReuseIdentifier:@"DetailInfoCell"];
     [self.tableView registerClass:[UserDetailCell class] forCellReuseIdentifier:@"UserDetailCell"];
     
-    UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"barbuttonicon_more"] style:UIBarButtonItemStylePlain target:self action:@selector(rightBarButtonDown)];
+
+    UIBarButtonItem *rightBarButtonItem =
+    [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"barbuttonicon_more"]
+                             style:UIBarButtonItemStylePlain target:self
+                             action:@selector(rightBarButtonDown)];
+    
     [self.navigationItem setRightBarButtonItem:rightBarButtonItem];
+
+
+
     
     [self initTestData];
     
@@ -63,15 +72,9 @@
     SettingGrounp *group = [_data objectAtIndex:section - 1];
     return group.itemsCount;
 }
-- (UIView *) tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
-{
-    UITableViewHeaderFooterView *view = [tableView dequeueReusableHeaderFooterViewWithIdentifier:@"FotterView"];
-    if (view == nil) {
-        view = [[UITableViewHeaderFooterView alloc] initWithReuseIdentifier:@"FotterView"];
-        [view setBackgroundView:[UIView new]];
-    }
-    return view;
-}
+
+
+
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -126,6 +129,15 @@
     return 43.0f;
 }
 
+- (UIView *) tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    UITableViewHeaderFooterView *view = [tableView dequeueReusableHeaderFooterViewWithIdentifier:@"FotterView"];
+    if (view == nil) {
+        view = [[UITableViewHeaderFooterView alloc] initWithReuseIdentifier:@"FotterView"];
+        [view setBackgroundView:[UIView new]];
+    }
+    return view;
+}
 - (CGFloat) tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
     return 20.0f;
