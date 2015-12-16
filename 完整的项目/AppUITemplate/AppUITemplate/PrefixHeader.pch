@@ -20,3 +20,4 @@
 #endif /* PrefixHeader_pch */
 
 #import "FontAwesomeKit.h"
+#import "AFNetworking.h"

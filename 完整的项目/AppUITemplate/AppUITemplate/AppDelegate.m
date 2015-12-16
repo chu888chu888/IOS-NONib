@@ -21,8 +21,8 @@
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleBlackTranslucent;
     
     //加入数据监视器
-    [[AFNetworkActivityLogger sharedLogger] startLogging];
-    [[AFNetworkActivityLogger sharedLogger] setLevel:AFLoggerLevelDebug];
+    //[[AFNetworkActivityLogger sharedLogger] startLogging];
+    //[[AFNetworkActivityLogger sharedLogger] setLevel:AFLoggerLevelDebug];
     
     AppRootViewController *rootVC = [[AppRootViewController alloc] init];
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];

@@ -50,6 +50,8 @@
 		B94CA0551C214E60004DB306 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B94CA02F1C214E60004DB306 /* UIImageView+WebCache.m */; };
 		B94CA0561C214E60004DB306 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B94CA0311C214E60004DB306 /* UIView+WebCacheOperation.m */; };
 		B94CA05A1C214F17004DB306 /* AFNetworkActivityLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = B94CA0591C214F17004DB306 /* AFNetworkActivityLogger.m */; };
+		B94CA05E1C215AA4004DB306 /* BaseSource.m in Sources */ = {isa = PBXBuildFile; fileRef = B94CA05D1C215AA4004DB306 /* BaseSource.m */; };
+		B94CA0621C215E4B004DB306 /* GistDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = B94CA0611C215E4B004DB306 /* GistDataSource.m */; };
 		B95CA78E1BE34BB000FB0C56 /* FriendSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B95CA78D1BE34BB000FB0C56 /* FriendSearchViewController.m */; };
 		B95CA7951BE34E2500FB0C56 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B95CA7931BE34E2500FB0C56 /* User.m */; };
 		B95CA7991BE34EDA00FB0C56 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B95CA7981BE34EDA00FB0C56 /* DetailsViewController.m */; };
@@ -210,6 +212,10 @@
 		B94CA0311C214E60004DB306 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
 		B94CA0581C214F17004DB306 /* AFNetworkActivityLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityLogger.h; sourceTree = "<group>"; };
 		B94CA0591C214F17004DB306 /* AFNetworkActivityLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityLogger.m; sourceTree = "<group>"; };
+		B94CA05C1C215AA4004DB306 /* BaseSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseSource.h; sourceTree = "<group>"; };
+		B94CA05D1C215AA4004DB306 /* BaseSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseSource.m; sourceTree = "<group>"; };
+		B94CA0601C215E4B004DB306 /* GistDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GistDataSource.h; sourceTree = "<group>"; };
+		B94CA0611C215E4B004DB306 /* GistDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GistDataSource.m; sourceTree = "<group>"; };
 		B95CA78C1BE34BB000FB0C56 /* FriendSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FriendSearchViewController.h; path = ../FriendSearchViewController.h; sourceTree = "<group>"; };
 		B95CA78D1BE34BB000FB0C56 /* FriendSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FriendSearchViewController.m; path = ../FriendSearchViewController.m; sourceTree = "<group>"; };
 		B95CA7921BE34E2500FB0C56 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
@@ -502,6 +508,25 @@
 			path = AFNetworkActivityLogger;
 			sourceTree = "<group>";
 		};
+		B94CA05B1C2159E1004DB306 /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				B94CA05F1C215E26004DB306 /* GistSource */,
+				B94CA05C1C215AA4004DB306 /* BaseSource.h */,
+				B94CA05D1C215AA4004DB306 /* BaseSource.m */,
+			);
+			path = NetWork;
+			sourceTree = "<group>";
+		};
+		B94CA05F1C215E26004DB306 /* GistSource */ = {
+			isa = PBXGroup;
+			children = (
+				B94CA0601C215E4B004DB306 /* GistDataSource.h */,
+				B94CA0611C215E4B004DB306 /* GistDataSource.m */,
+			);
+			path = GistSource;
+			sourceTree = "<group>";
+		};
 		B95CA78B1BE34B8B00FB0C56 /* FriendListVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -656,6 +681,7 @@
 		B9C063181BE0CC2F00433F42 /* AppUITemplate */ = {
 			isa = PBXGroup;
 			children = (
+				B94CA05B1C2159E1004DB306 /* NetWork */,
 				B9FD209F1BE21B6A00784C96 /* Models */,
 				B9FD207A1BE217C400784C96 /* Extensions */,
 				B9FD20731BE1F49600784C96 /* View */,
@@ -959,6 +985,7 @@
 				B94CA0561C214E60004DB306 /* UIView+WebCacheOperation.m in Sources */,
 				B94CA03F1C214E60004DB306 /* UIAlertView+AFNetworking.m in Sources */,
 				B94CA0501C214E60004DB306 /* SDWebImagePrefetcher.m in Sources */,
+				B94CA05E1C215AA4004DB306 /* BaseSource.m in Sources */,
 				B94CA0321C214E60004DB306 /* AFHTTPRequestOperation.m in Sources */,
 				B9C063391BE0CD0500433F42 /* AppRootViewController.m in Sources */,
 				B9AEF4C91C16D43C009301F5 /* FSCalendarConstance.m in Sources */,
@@ -1027,6 +1054,7 @@
 				B96A81601BE8BA41009FA2EB /* FriendsViewController.m in Sources */,
 				B94CA03A1C214E60004DB306 /* AFURLSessionManager.m in Sources */,
 				B94CA0351C214E60004DB306 /* AFNetworkReachabilityManager.m in Sources */,
+				B94CA0621C215E4B004DB306 /* GistDataSource.m in Sources */,
 				B9C0631E1BE0CC2F00433F42 /* AppDelegate.m in Sources */,
 				B9FD20981BE2184E00784C96 /* common.m in Sources */,
 				B9FD204D1BE1EE0600784C96 /* CommonNavigationViewController.m in Sources */,

@@ -7,7 +7,7 @@
 //
 
 #import "GistViewController.h"
-
+#import "GistDataSource.h"
 @interface GistViewController ()
 
 @end
@@ -18,6 +18,18 @@
     [super viewDidLoad];
     //[self setHidesBottomBarWhenPushed:YES];
     // Do any additional setup after loading the view.
+    GistDataSourceCompletionBlock completionBlock=^(NSArray * data,NSString *errorString)
+    {
+        if (data!=nil) {
+            NSLog(@"data is ok");
+        }
+        else
+        {
+            NSLog(@"data is error");
+        }
+    };
+    GistDataSource *source=[GistDataSource discoverSource];
+    [source getGistList:nil completion:completionBlock];
 }
 
 - (void)didReceiveMemoryWarning {
