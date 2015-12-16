@@ -18,3 +18,5 @@
 #import "UIImage+TL.h"
 #import "UIView+TL.h"
 #endif /* PrefixHeader_pch */
+
+#import "FontAwesomeKit.h"

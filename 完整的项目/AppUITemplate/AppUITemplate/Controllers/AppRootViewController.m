@@ -10,6 +10,7 @@
 #import "ConversationVC/ConversationViewController.h"
 #import "CommonVC/CommonNavigationViewController.h"
 #import "FriendListVC/FriendsViewController.h"
+#import "GistViewController.h"
 @interface AppRootViewController ()
 
 @end
@@ -32,6 +33,28 @@
     [friendVC.tabBarItem setSelectedImage:[UIImage imageNamed:@"tabbar_contactsHL"]];
     CommonNavigationViewController *friendNaVC=[[CommonNavigationViewController alloc]initWithRootViewController:friendVC];
     [childVCArray addObject:friendNaVC];
+    
+    /*
+    GistViewController *GistVC=[[GistViewController alloc]init];
+    [GistVC.tabBarItem setTitle:@"Github"];
+    [GistVC.tabBarItem setImage:[UIImage imageNamed:@"tabbar_contacts"]];
+    [GistVC.tabBarItem setSelectedImage:[UIImage imageNamed:@"tabbar_contactsHL"]];
+    CommonNavigationViewController *GistNaVC=[[CommonNavigationViewController alloc]initWithRootViewController:GistVC];
+    [childVCArray addObject:GistNaVC];
+    */
+    
+    GistViewController *gistVC=[[GistViewController alloc]init];
+    [gistVC.tabBarItem setTitle:@"Github API"];
+    
+    FAKFoundationIcons *cogIcon=[FAKFoundationIcons socialGithubIconWithSize:30];
+    [cogIcon addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor]];
+    UIImage *conImage = [cogIcon imageWithSize:CGSizeMake(30, 30)];
+    [gistVC.tabBarItem setImage:conImage];
+    [gistVC.tabBarItem setSelectedImage:conImage];
+     
+    CommonNavigationViewController *gistNaVC=[[CommonNavigationViewController alloc]initWithRootViewController:gistVC];
+    [childVCArray addObject:gistNaVC];
+    
     
     [self setViewControllers:childVCArray];
 }

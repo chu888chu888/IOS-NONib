@@ -12,7 +12,6 @@
 #import "ConversationSearchVC/ConversationSearchViewController.h"
 #import "ChatViewController.h"
 #import "User.h"
-#import "FontAwesomeKit.h"
 #import "CalendarViewController.h"
 
 @interface ConversationViewController ()<UISearchBarDelegate>
@@ -41,7 +40,7 @@
 {
     //导航条标题
     [self.navigationItem setTitle:@"消息"];
-    [self setHidesBottomBarWhenPushed:NO];
+    //[self setHidesBottomBarWhenPushed:YES];
     //右边导航条按钮
     _navRightButton=[[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"barbuttonicon_add"] style:UIBarButtonItemStylePlain target:self action:@selector(navRightButtonDown)];
     [self.navigationItem setRightBarButtonItem:_navRightButton];

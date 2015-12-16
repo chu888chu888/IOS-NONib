@@ -28,7 +28,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.navigationItem setTitle:@"通讯录"];
-    [self setHidesBottomBarWhenPushed:NO];
+    //[self setHidesBottomBarWhenPushed:YES];
     [self.tableView setShowsVerticalScrollIndicator:NO];
     [self.tableView registerClass:[FriendCell class] forCellReuseIdentifier:@"FriendCell"];
     

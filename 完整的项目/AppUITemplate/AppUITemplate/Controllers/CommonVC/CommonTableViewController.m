@@ -19,7 +19,7 @@
     [self.tableView setTableFooterView:[UIView new]];
     [self.view setBackgroundColor:DEFAULT_BACKGROUND_COLOR];
     [self.tableView setBackgroundColor:DEFAULT_BACKGROUND_COLOR];
-    [self setHidesBottomBarWhenPushed:YES];
+    //[self setHidesBottomBarWhenPushed:YES];
 }
 
 -(void)viewWillAppear:(BOOL)animated
