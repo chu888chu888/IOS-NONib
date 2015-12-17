@@ -7,6 +7,7 @@
 //
 
 #import "GistDataSource.h"
+#import "Gists.h"
 #define GistURL @"https://api.github.com/gists/public"
 @implementation GistDataSource
 +(GistDataSource *)discoverSource
@@ -27,10 +28,33 @@
         AFHTTPRequestOperationManager *manager=[AFHTTPRequestOperationManager manager];
         [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
         [manager GET:GistURL parameters:UrlParameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
-            NSLog(@"JSON:%@",responseObject);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+                completionBlock([self processResponseObject:responseObject], nil);
+            });
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
             NSLog(@"Error:%@",error);
         }];
     }
 }
+#pragma mark -
+#pragma mark Data Parsing
+
+- (NSMutableArray*)processResponseObject:(NSDictionary*)data
+{
+    if (data == nil)
+    {
+        return nil;
+    }
+    NSMutableArray* sortedArray = [[NSMutableArray alloc] init];
+    for (NSDictionary* item in data)
+    {
+        Gists* gist = [[Gists alloc] init];
+        gist.url=[item valueForKey:@"url"];
+        [sortedArray addObject:gist];
+    }
+
+    return sortedArray;
+}
+
 @end

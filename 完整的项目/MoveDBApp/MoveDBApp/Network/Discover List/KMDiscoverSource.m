@@ -48,7 +48,7 @@
              NSDictionary* infosDictionary = [self dictionaryFromResponseData:operation.responseData jsonPatternFile:@"KMDiscoverSourceJsonPattern.json"];
              dispatch_async(dispatch_get_main_queue(), ^{
                  [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-                 completionBlock([self processResponseObject:infosDictionary], nil);
+                 completionBlock([self processResponseObject:responseObject], nil);
              });
          }
              failure:^(AFHTTPRequestOperation *operation, NSError *error)

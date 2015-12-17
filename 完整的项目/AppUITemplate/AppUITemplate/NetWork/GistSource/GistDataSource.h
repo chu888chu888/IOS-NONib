@@ -7,7 +7,7 @@
 //
 
 #import "BaseSource.h"
-typedef void (^GistDataSourceCompletionBlock)(NSArray * data,NSString * errorString);
+typedef void (^GistDataSourceCompletionBlock)(NSMutableArray * data,NSString * errorString);
 
 @interface GistDataSource : BaseSource
 +(GistDataSource *)discoverSource;

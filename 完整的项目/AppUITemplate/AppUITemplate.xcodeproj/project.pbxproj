@@ -11,6 +11,7 @@
 		B90BDF4B1BFDB7B300A8F4E5 /* UserDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B90BDF4A1BFDB7B300A8F4E5 /* UserDetailCell.m */; };
 		B90BDF4E1BFDB7DD00A8F4E5 /* FounctionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B90BDF4D1BFDB7DD00A8F4E5 /* FounctionCell.m */; };
 		B911F85C1BF5BD85009CFA47 /* ConversationSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B911F85B1BF5BD85009CFA47 /* ConversationSearchViewController.m */; };
+		B92301811C22B1D6001E0055 /* Gists.m in Sources */ = {isa = PBXBuildFile; fileRef = B92301801C22B1D6001E0055 /* Gists.m */; };
 		B94C9FE21C21483C004DB306 /* GistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B94C9FE11C21483C004DB306 /* GistViewController.m */; };
 		B94CA0321C214E60004DB306 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B94C9FE61C214E60004DB306 /* AFHTTPRequestOperation.m */; };
 		B94CA0331C214E60004DB306 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B94C9FE81C214E60004DB306 /* AFHTTPRequestOperationManager.m */; };
@@ -135,6 +136,8 @@
 		B90BDF4D1BFDB7DD00A8F4E5 /* FounctionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FounctionCell.m; sourceTree = "<group>"; };
 		B911F85A1BF5BD85009CFA47 /* ConversationSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversationSearchViewController.h; sourceTree = "<group>"; };
 		B911F85B1BF5BD85009CFA47 /* ConversationSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversationSearchViewController.m; sourceTree = "<group>"; };
+		B923017F1C22B1D6001E0055 /* Gists.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gists.h; sourceTree = "<group>"; };
+		B92301801C22B1D6001E0055 /* Gists.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Gists.m; sourceTree = "<group>"; };
 		B94C9FE01C21483C004DB306 /* GistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GistViewController.h; sourceTree = "<group>"; };
 		B94C9FE11C21483C004DB306 /* GistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GistViewController.m; sourceTree = "<group>"; };
 		B94C9FE51C214E60004DB306 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -883,6 +886,8 @@
 				B95CA7931BE34E2500FB0C56 /* User.m */,
 				B9FD20A01BE21B9200784C96 /* Conversation.h */,
 				B9FD20A11BE21B9200784C96 /* Conversation.m */,
+				B923017F1C22B1D6001E0055 /* Gists.h */,
+				B92301801C22B1D6001E0055 /* Gists.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1024,6 +1029,7 @@
 				B9FD20791BE1F4C100784C96 /* CommonTableViewCell.m in Sources */,
 				B90BDF4E1BFDB7DD00A8F4E5 /* FounctionCell.m in Sources */,
 				B94CA0411C214E60004DB306 /* UIImageView+AFNetworking.m in Sources */,
+				B92301811C22B1D6001E0055 /* Gists.m in Sources */,
 				B9AEF4CC1C16D43C009301F5 /* FSCalendarStickyHeader.m in Sources */,
 				B9AEF4CF1C16D43C009301F5 /* NSString+FSExtension.m in Sources */,
 				B9C063271BE0CC2F00433F42 /* AppUITemplate.xcdatamodeld in Sources */,

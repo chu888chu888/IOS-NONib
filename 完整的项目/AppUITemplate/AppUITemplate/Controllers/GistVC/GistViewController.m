@@ -9,7 +9,7 @@
 #import "GistViewController.h"
 #import "GistDataSource.h"
 @interface GistViewController ()
-
+@property (nonatomic, strong) NSMutableArray* dataSource;
 @end
 
 @implementation GistViewController
@@ -21,11 +21,11 @@
     GistDataSourceCompletionBlock completionBlock=^(NSArray * data,NSString *errorString)
     {
         if (data!=nil) {
-            NSLog(@"data is ok");
+            [self processData:data];
         }
         else
         {
-            NSLog(@"data is error");
+            NSLog(@"网络错误");
         }
     };
     GistDataSource *source=[GistDataSource discoverSource];
@@ -36,7 +36,50 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+#pragma mark -
+#pragma mark Fetched Data Processing
 
+- (void)processData:(NSMutableArray*)data
+{
+    if ([data count] == 0)
+    {
+        NSLog(@"没有读取到内容,请重试");
+    }
+    else
+    {
+        if (!self.dataSource)
+        {
+            self.dataSource = [[NSMutableArray alloc] init];
+        }
+        self.dataSource = data;
+        [self.tableView reloadData];
+    }
+}
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [self.dataSource count];
+    
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *simpleTableIdentifier = @"SimpleTableItem";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+    }
+    
+    cell.textLabel.text =[[self.dataSource objectAtIndex:indexPath.row] url];
+    return cell;
+    
+}
 /*
 #pragma mark - Navigation
 
