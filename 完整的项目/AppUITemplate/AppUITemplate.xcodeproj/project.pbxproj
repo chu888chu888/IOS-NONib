@@ -96,6 +96,8 @@
 		B9C063291BE0CC2F00433F42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9C063281BE0CC2F00433F42 /* Assets.xcassets */; };
 		B9C0632C1BE0CC2F00433F42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9C0632A1BE0CC2F00433F42 /* LaunchScreen.storyboard */; };
 		B9C063391BE0CD0500433F42 /* AppRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C063381BE0CD0500433F42 /* AppRootViewController.m */; };
+		B9E6AA431C23DB23000C1E11 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E6AA421C23DB23000C1E11 /* MBProgressHUD.m */; };
+		B9E6AA471C23DF72000C1E11 /* UIView+MJAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E6AA461C23DF72000C1E11 /* UIView+MJAlertView.m */; };
 		B9FD20451BE1EB2400784C96 /* CommonTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9FD20441BE1EB2400784C96 /* CommonTableViewController.m */; };
 		B9FD20491BE1EC0100784C96 /* ConversationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9FD20481BE1EC0100784C96 /* ConversationViewController.m */; };
 		B9FD204D1BE1EE0600784C96 /* CommonNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9FD204C1BE1EE0600784C96 /* CommonNavigationViewController.m */; };
@@ -297,6 +299,10 @@
 		B9C0632D1BE0CC2F00433F42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9C063371BE0CD0500433F42 /* AppRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppRootViewController.h; path = Controllers/AppRootViewController.h; sourceTree = "<group>"; };
 		B9C063381BE0CD0500433F42 /* AppRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppRootViewController.m; path = Controllers/AppRootViewController.m; sourceTree = "<group>"; };
+		B9E6AA411C23DB23000C1E11 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		B9E6AA421C23DB23000C1E11 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		B9E6AA451C23DF72000C1E11 /* UIView+MJAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJAlertView.h"; sourceTree = "<group>"; };
+		B9E6AA461C23DF72000C1E11 /* UIView+MJAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJAlertView.m"; sourceTree = "<group>"; };
 		B9FD203D1BE1E59100784C96 /* macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = macros.h; sourceTree = "<group>"; };
 		B9FD203E1BE1E5DB00784C96 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		B9FD20431BE1EB2400784C96 /* CommonTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommonTableViewController.h; path = Controllers/CommonVC/CommonTableViewController.h; sourceTree = "<group>"; };
@@ -584,6 +590,8 @@
 		B9AEF4801C16D375009301F5 /* Vender */ = {
 			isa = PBXGroup;
 			children = (
+				B9E6AA441C23DF72000C1E11 /* MJAlertView */,
+				B9E6AA401C23DB23000C1E11 /* MBProgressHUD */,
 				B94CA0571C214F17004DB306 /* AFNetworkActivityLogger */,
 				B94C9FE31C214E60004DB306 /* AFNetworking */,
 				B94CA00C1C214E60004DB306 /* AFOAuth2Manager */,
@@ -726,6 +734,24 @@
 				B9C063381BE0CD0500433F42 /* AppRootViewController.m */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		B9E6AA401C23DB23000C1E11 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				B9E6AA411C23DB23000C1E11 /* MBProgressHUD.h */,
+				B9E6AA421C23DB23000C1E11 /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		B9E6AA441C23DF72000C1E11 /* MJAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				B9E6AA451C23DF72000C1E11 /* UIView+MJAlertView.h */,
+				B9E6AA461C23DF72000C1E11 /* UIView+MJAlertView.m */,
+			);
+			path = MJAlertView;
 			sourceTree = "<group>";
 		};
 		B9FD203B1BE1E53B00784C96 /* Helper */ = {
@@ -1035,6 +1061,7 @@
 				B9C063271BE0CC2F00433F42 /* AppUITemplate.xcdatamodeld in Sources */,
 				B94CA0361C214E60004DB306 /* AFSecurityPolicy.m in Sources */,
 				B94CA0451C214E60004DB306 /* AFHTTPRequestSerializer+OAuth2.m in Sources */,
+				B9E6AA431C23DB23000C1E11 /* MBProgressHUD.m in Sources */,
 				B94CA0421C214E60004DB306 /* UIProgressView+AFNetworking.m in Sources */,
 				B94CA0331C214E60004DB306 /* AFHTTPRequestOperationManager.m in Sources */,
 				B9AEF4CA1C16D43C009301F5 /* FSCalendarFlowLayout.m in Sources */,
@@ -1063,6 +1090,7 @@
 				B94CA0621C215E4B004DB306 /* GistDataSource.m in Sources */,
 				B9C0631E1BE0CC2F00433F42 /* AppDelegate.m in Sources */,
 				B9FD20981BE2184E00784C96 /* common.m in Sources */,
+				B9E6AA471C23DF72000C1E11 /* UIView+MJAlertView.m in Sources */,
 				B9FD204D1BE1EE0600784C96 /* CommonNavigationViewController.m in Sources */,
 				B94CA0551C214E60004DB306 /* UIImageView+WebCache.m in Sources */,
 				B9AEF4C51C16D43C009301F5 /* FSCalendar.m in Sources */,

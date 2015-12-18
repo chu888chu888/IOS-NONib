@@ -16,25 +16,44 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //[self setHidesBottomBarWhenPushed:YES];
-    // Do any additional setup after loading the view.
-    GistDataSourceCompletionBlock completionBlock=^(NSArray * data,NSString *errorString)
-    {
-        if (data!=nil) {
-            [self processData:data];
-        }
-        else
-        {
-            NSLog(@"网络错误");
-        }
-    };
-    GistDataSource *source=[GistDataSource discoverSource];
-    [source getGistList:nil completion:completionBlock];
+    [self setupTableView];
+    [self requestGistSource];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+#pragma mark -
+#pragma mark Setup Methods
+-(void)setupTableView
+{
+    
+}
+#pragma mark -
+#pragma mark Network Request methods
+-(void)requestGistSource
+{
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+        
+        GistDataSourceCompletionBlock completionBlock=^(NSMutableArray * data,NSString *errorString)
+        {
+            if (data!=nil) {
+                [self processData:data];
+            }
+            else
+            {
+                [UIView addMJNotifierWithText:@"网络故障请重试" dismissAutomatically:YES];
+            }
+        };
+        GistDataSource *source=[GistDataSource discoverSource];
+        [source getGistList:nil completion:completionBlock];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+        });
+    });
 }
 #pragma mark -
 #pragma mark Fetched Data Processing
@@ -43,7 +62,7 @@
 {
     if ([data count] == 0)
     {
-        NSLog(@"没有读取到内容,请重试");
+        [UIView addMJNotifierWithText:@"没有读取到内容,请重试" dismissAutomatically:YES];
     }
     else
     {
