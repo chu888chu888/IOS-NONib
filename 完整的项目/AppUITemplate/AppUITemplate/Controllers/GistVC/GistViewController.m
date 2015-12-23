@@ -8,6 +8,8 @@
 
 #import "GistViewController.h"
 #import "GistDataSource.h"
+#import "GistCellTableViewCell.h"
+#import "GistsCellWithNibTableViewCell.h"
 @interface GistViewController ()
 @property (nonatomic, strong) NSMutableArray* dataSource;
 @end
@@ -28,6 +30,9 @@
 #pragma mark Setup Methods
 -(void)setupTableView
 {
+    [self.navigationItem setTitle:@"Gist笔记"];
+    
+    [self.tableView registerClass:[GistCellTableViewCell class] forCellReuseIdentifier:@"GistCellTableViewCell"];
     
 }
 #pragma mark -
@@ -87,6 +92,7 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    /*
     static NSString *simpleTableIdentifier = @"SimpleTableItem";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
@@ -97,16 +103,30 @@
     
     cell.textLabel.text =[[self.dataSource objectAtIndex:indexPath.row] url];
     return cell;
+     */
+    /*
+    GistCellTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"GistCellTableViewCell"];
+    [cell setGistMsg:_dataSource[indexPath.row]];
+    [cell setTopLineStyle:CellLineStyleNone];
+    [cell setBottomLineStyle:CellLineStyleDefault];
+    return cell;
+    */
+    static NSString *GistsCellWithNibTableIdentifier=@"GistsCellWithNibTableCell";
+    GistsCellWithNibTableViewCell *cell=(GistsCellWithNibTableViewCell *)[tableView dequeueReusableCellWithIdentifier:GistsCellWithNibTableIdentifier];
+    if(cell==nil)
+    {
+        NSArray *nib=[[NSBundle mainBundle] loadNibNamed:@"GistsCellWithNibTableViewCell" owner:self options:nil];
+        cell=[nib objectAtIndex:0];
+        
+    }
+    [cell setGistMsg:_dataSource[indexPath.row]];
+    return cell;
+
     
 }
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (CGFloat)tableView:(UITableView *)atableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 200; // 10即消息上下的空间，可自由调整
 }
-*/
 
 @end

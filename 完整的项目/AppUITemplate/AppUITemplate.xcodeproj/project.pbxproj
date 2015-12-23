@@ -12,6 +12,8 @@
 		B90BDF4E1BFDB7DD00A8F4E5 /* FounctionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B90BDF4D1BFDB7DD00A8F4E5 /* FounctionCell.m */; };
 		B911F85C1BF5BD85009CFA47 /* ConversationSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B911F85B1BF5BD85009CFA47 /* ConversationSearchViewController.m */; };
 		B92301811C22B1D6001E0055 /* Gists.m in Sources */ = {isa = PBXBuildFile; fileRef = B92301801C22B1D6001E0055 /* Gists.m */; };
+		B946F9BD1C2A8619009C271E /* GistsCellWithNibTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B946F9BB1C2A8619009C271E /* GistsCellWithNibTableViewCell.m */; };
+		B946F9BE1C2A8619009C271E /* GistsCellWithNibTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B946F9BC1C2A8619009C271E /* GistsCellWithNibTableViewCell.xib */; };
 		B94C9FE21C21483C004DB306 /* GistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B94C9FE11C21483C004DB306 /* GistViewController.m */; };
 		B94CA0321C214E60004DB306 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B94C9FE61C214E60004DB306 /* AFHTTPRequestOperation.m */; };
 		B94CA0331C214E60004DB306 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B94C9FE81C214E60004DB306 /* AFHTTPRequestOperationManager.m */; };
@@ -98,6 +100,7 @@
 		B9C063391BE0CD0500433F42 /* AppRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C063381BE0CD0500433F42 /* AppRootViewController.m */; };
 		B9E6AA431C23DB23000C1E11 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E6AA421C23DB23000C1E11 /* MBProgressHUD.m */; };
 		B9E6AA471C23DF72000C1E11 /* UIView+MJAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E6AA461C23DF72000C1E11 /* UIView+MJAlertView.m */; };
+		B9E6AA4B1C23F11D000C1E11 /* GistCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E6AA4A1C23F11D000C1E11 /* GistCellTableViewCell.m */; };
 		B9FD20451BE1EB2400784C96 /* CommonTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9FD20441BE1EB2400784C96 /* CommonTableViewController.m */; };
 		B9FD20491BE1EC0100784C96 /* ConversationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9FD20481BE1EC0100784C96 /* ConversationViewController.m */; };
 		B9FD204D1BE1EE0600784C96 /* CommonNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9FD204C1BE1EE0600784C96 /* CommonNavigationViewController.m */; };
@@ -140,6 +143,9 @@
 		B911F85B1BF5BD85009CFA47 /* ConversationSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversationSearchViewController.m; sourceTree = "<group>"; };
 		B923017F1C22B1D6001E0055 /* Gists.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gists.h; sourceTree = "<group>"; };
 		B92301801C22B1D6001E0055 /* Gists.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Gists.m; sourceTree = "<group>"; };
+		B946F9BA1C2A8619009C271E /* GistsCellWithNibTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GistsCellWithNibTableViewCell.h; sourceTree = "<group>"; };
+		B946F9BB1C2A8619009C271E /* GistsCellWithNibTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GistsCellWithNibTableViewCell.m; sourceTree = "<group>"; };
+		B946F9BC1C2A8619009C271E /* GistsCellWithNibTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GistsCellWithNibTableViewCell.xib; sourceTree = "<group>"; };
 		B94C9FE01C21483C004DB306 /* GistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GistViewController.h; sourceTree = "<group>"; };
 		B94C9FE11C21483C004DB306 /* GistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GistViewController.m; sourceTree = "<group>"; };
 		B94C9FE51C214E60004DB306 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -303,6 +309,8 @@
 		B9E6AA421C23DB23000C1E11 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		B9E6AA451C23DF72000C1E11 /* UIView+MJAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJAlertView.h"; sourceTree = "<group>"; };
 		B9E6AA461C23DF72000C1E11 /* UIView+MJAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJAlertView.m"; sourceTree = "<group>"; };
+		B9E6AA491C23F11D000C1E11 /* GistCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GistCellTableViewCell.h; sourceTree = "<group>"; };
+		B9E6AA4A1C23F11D000C1E11 /* GistCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GistCellTableViewCell.m; sourceTree = "<group>"; };
 		B9FD203D1BE1E59100784C96 /* macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = macros.h; sourceTree = "<group>"; };
 		B9FD203E1BE1E5DB00784C96 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		B9FD20431BE1EB2400784C96 /* CommonTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommonTableViewController.h; path = Controllers/CommonVC/CommonTableViewController.h; sourceTree = "<group>"; };
@@ -754,6 +762,18 @@
 			path = MJAlertView;
 			sourceTree = "<group>";
 		};
+		B9E6AA481C23F0F5000C1E11 /* Gist */ = {
+			isa = PBXGroup;
+			children = (
+				B9E6AA491C23F11D000C1E11 /* GistCellTableViewCell.h */,
+				B9E6AA4A1C23F11D000C1E11 /* GistCellTableViewCell.m */,
+				B946F9BA1C2A8619009C271E /* GistsCellWithNibTableViewCell.h */,
+				B946F9BB1C2A8619009C271E /* GistsCellWithNibTableViewCell.m */,
+				B946F9BC1C2A8619009C271E /* GistsCellWithNibTableViewCell.xib */,
+			);
+			path = Gist;
+			sourceTree = "<group>";
+		};
 		B9FD203B1BE1E53B00784C96 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
@@ -825,6 +845,7 @@
 		B9FD20731BE1F49600784C96 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B9E6AA481C23F0F5000C1E11 /* Gist */,
 				B90BDF481BFDB78600A8F4E5 /* Detail */,
 				B96A81611BE8BD3E009FA2EB /* Friends */,
 				B9FD20741BE1F49600784C96 /* Common */,
@@ -992,6 +1013,7 @@
 				B9FD20661BE1EF5D00784C96 /* 2.jpg in Resources */,
 				B9C0632C1BE0CC2F00433F42 /* LaunchScreen.storyboard in Resources */,
 				B94CA0471C214E60004DB306 /* LICENSE in Resources */,
+				B946F9BE1C2A8619009C271E /* GistsCellWithNibTableViewCell.xib in Resources */,
 				B9C063291BE0CC2F00433F42 /* Assets.xcassets in Resources */,
 				B9AEF4F31C16D975009301F5 /* ionicons.ttf in Resources */,
 				B9FD20641BE1EF5D00784C96 /* 11.jpg in Resources */,
@@ -1027,6 +1049,7 @@
 				B9FD20451BE1EB2400784C96 /* CommonTableViewController.m in Sources */,
 				B94CA03E1C214E60004DB306 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				B96A815D1BE8B0F0009FA2EB /* ChatViewController.m in Sources */,
+				B9E6AA4B1C23F11D000C1E11 /* GistCellTableViewCell.m in Sources */,
 				B980E0C11BE9ED7C00FFE741 /* DataHelper.m in Sources */,
 				B94CA04C1C214E60004DB306 /* SDWebImageDecoder.m in Sources */,
 				B9FD208B1BE217C400784C96 /* UIImage+TL.m in Sources */,
@@ -1104,6 +1127,7 @@
 				B9AEF4C71C16D43C009301F5 /* FSCalendarCell.m in Sources */,
 				B94CA0391C214E60004DB306 /* AFURLResponseSerialization.m in Sources */,
 				B9FD20721BE1F02100784C96 /* CommonViewController.m in Sources */,
+				B946F9BD1C2A8619009C271E /* GistsCellWithNibTableViewCell.m in Sources */,
 				B9AEF4CE1C16D43C009301F5 /* NSDate+FSExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AppUITemplate/NetWork/GistSource/GistDataSource.m"
-            timestampString = "472038698.106037"
+            timestampString = "472555597.065404"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
             landmarkName = "-processResponseObject:"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AppUITemplate/NetWork/GistSource/GistDataSource.m"
-            timestampString = "472038698.106037"
+            timestampString = "472555597.065404"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
             landmarkName = "-processResponseObject:"
             landmarkType = "5">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AppUITemplate/Controllers/GistVC/GistViewController.m"
-            timestampString = "472113355.530085"
+            timestampString = "472382163.504951"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
             landmarkName = "-processData:"
             landmarkType = "5">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AppUITemplate/Controllers/GistVC/GistViewController.m"
-            timestampString = "472113267.765"
+            timestampString = "472382163.504951"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -74,12 +74,42 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AppUITemplate/Controllers/GistVC/GistViewController.m"
-            timestampString = "472113355.530085"
+            timestampString = "472382163.504951"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "-processData:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppUITemplate/Models/Gists.h"
+            timestampString = "472547494.281741"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppUITemplate/NetWork/GistSource/GistDataSource.m"
+            timestampString = "472555597.065404"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "-processResponseObject:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
