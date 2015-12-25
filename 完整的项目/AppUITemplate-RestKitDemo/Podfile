@@ -1,0 +1,4 @@
+pod 'RestKit', '~> 0.24.0'
+pod 'RestKit/Testing', '~> 0.24.0'
+pod 'Masonry'
+pod 'LinqToObjectiveC', '2.0.0'
