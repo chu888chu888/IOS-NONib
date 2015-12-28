@@ -12,5 +12,5 @@
 @property (nonatomic, strong) Gists *gistMsg;
 @property (weak, nonatomic) IBOutlet UILabel *lblCreate_at_Time;
 @property (weak, nonatomic) IBOutlet UILabel *lblUpdate_at_Time;
-
+@property (weak, nonatomic) IBOutlet UILabel *lblDesc;
 @end

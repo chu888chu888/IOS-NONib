@@ -22,6 +22,8 @@
 @property (nonatomic, strong) NSString *updated_at;
 @property (nonatomic, strong) NSString *gistdescription;
 @property (nonatomic, strong) NSString *comments_url;
-@property (nonatomic, assign) Boolean truncated;
-@property (nonatomic, assign) Boolean ispublic;
+@property (nonatomic, assign) BOOL truncated;
+@property (nonatomic, assign) BOOL ispublic;
+
+-(id)initWithArray:(NSArray *)array;
 @end

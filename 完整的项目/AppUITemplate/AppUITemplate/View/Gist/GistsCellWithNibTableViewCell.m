@@ -24,5 +24,6 @@
     _gistMsg=gistMsg;
     [_lblCreate_at_Time setText:_gistMsg.created_at];
     [_lblUpdate_at_Time setText:_gistMsg.updated_at];
+    [_lblDesc setText:_gistMsg.gistdescription];
 }
 @end

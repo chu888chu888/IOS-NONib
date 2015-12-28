@@ -47,23 +47,9 @@
         return nil;
     }
     NSMutableArray* sortedArray = [[NSMutableArray alloc] init];
-    for (NSDictionary* item in data)
+    for (NSArray* item in data)
     {
-        Gists* gist = [[Gists alloc] init];
-        
-        gist.url=[item valueForKey:@"url"];
-        gist.gistid=[item valueForKey:@"id"];
-        gist.created_at=[item valueForKey:@"created_at"];
-        gist.updated_at=[item valueForKey:@"updated_at"];
-        gist.truncated=[item valueForKey:@"truncated"];
-        gist.forks_url=[item valueForKey:@"forks_url"];
-        gist.comments_url=[item valueForKey:@"commits_url"];
-        gist.git_pull_url=[item valueForKey:@"git_pull_url"];
-        gist.html_url=[item valueForKey:@"html_url"];
-        gist.gistdescription=[item valueForKey:@"description"];
-        gist.comments_url=[item valueForKey:@"comments_url"];
-        gist.ispublic=[item valueForKey:@"public"];
-        
+        Gists *gist=[[Gists alloc] initWithArray:item];
         [sortedArray addObject:gist];
     }
 
