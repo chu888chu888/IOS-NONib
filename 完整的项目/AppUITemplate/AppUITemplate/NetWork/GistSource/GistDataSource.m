@@ -33,7 +33,7 @@
                 completionBlock([self processResponseObject:responseObject], nil);
             });
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-            NSLog(@"Error:%@",error);
+            [UIView addMJNotifierWithText:@"网络故障请重试" dismissAutomatically:YES];
         }];
     }
 }
@@ -49,8 +49,14 @@
     NSMutableArray* sortedArray = [[NSMutableArray alloc] init];
     for (NSArray* item in data)
     {
+        
         Gists *gist=[[Gists alloc] initWithArray:item];
         [sortedArray addObject:gist];
+        
+        /*
+        Gists *gist=[[Gists alloc]init];
+        [sortedArray addObject:gist];
+         */
     }
 
     return sortedArray;

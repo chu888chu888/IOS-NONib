@@ -7,7 +7,7 @@
 //
 
 #import "CommonTableViewController.h"
-
+#import "GistDataSource.h"
 @interface GistViewController : CommonTableViewController
-
+@property(nonatomic,strong) GistDataSource *source;
 @end

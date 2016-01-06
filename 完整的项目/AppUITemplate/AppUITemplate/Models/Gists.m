@@ -41,16 +41,16 @@
     if(self)
     {
         [self initialiseWithSafeValues];
-        _url=[array valueForKey:@"url"];
-        _gistid=[array valueForKey:@"id"];
-        _created_at=[array valueForKey:@"created_at"];
-        _updated_at=[array valueForKey:@"updated_at"];
+        _url=[NSString stringWithFormat:@"%@",[array valueForKey:@"url"]];
+        _gistid=[NSString stringWithFormat:@"%@",[array valueForKey:@"id"]];
+        _created_at=[NSString stringWithFormat:@"%@",[array valueForKey:@"created_at"]];
+        _updated_at=[NSString stringWithFormat:@"%@",[array valueForKey:@"updated_at"]];
         _truncated=[array valueForKey:@"truncated"];
-        _forks_url=[array valueForKey:@"forks_url"];
-        _comments_url=[array valueForKey:@"comments_url"];
-        _git_pull_url=[array valueForKey:@"git_push_url"];
-        _html_url=[array valueForKey:@"html_url"];
-        _gistdescription=[array valueForKey:@"description"];
+        _forks_url=[NSString stringWithFormat:@"%@",[array valueForKey:@"forks_url"]];
+        _comments_url=[NSString stringWithFormat:@"%@",[array valueForKey:@"comments_url"]];
+        _git_pull_url=[NSString stringWithFormat:@"%@",[array valueForKey:@"git_push_url"]];
+        _html_url=[NSString stringWithFormat:@"%@",[array valueForKey:@"html_url"]];
+        _gistdescription=[NSString stringWithFormat:@"%@",[array valueForKey:@"description"]];
         _ispublic=[array valueForKey:@"public"];
     }
     return self;
