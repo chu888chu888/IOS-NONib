@@ -12,6 +12,7 @@
 		B90BDF4E1BFDB7DD00A8F4E5 /* FounctionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B90BDF4D1BFDB7DD00A8F4E5 /* FounctionCell.m */; };
 		B911F85C1BF5BD85009CFA47 /* ConversationSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B911F85B1BF5BD85009CFA47 /* ConversationSearchViewController.m */; };
 		B92301811C22B1D6001E0055 /* Gists.m in Sources */ = {isa = PBXBuildFile; fileRef = B92301801C22B1D6001E0055 /* Gists.m */; };
+		B926D6AC1C3E047700DA0ACD /* HealthKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B926D6AB1C3E047700DA0ACD /* HealthKitViewController.m */; };
 		B946F9BD1C2A8619009C271E /* GistsCellWithNibTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B946F9BB1C2A8619009C271E /* GistsCellWithNibTableViewCell.m */; };
 		B946F9BE1C2A8619009C271E /* GistsCellWithNibTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B946F9BC1C2A8619009C271E /* GistsCellWithNibTableViewCell.xib */; };
 		B94C9FE21C21483C004DB306 /* GistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B94C9FE11C21483C004DB306 /* GistViewController.m */; };
@@ -142,6 +143,8 @@
 		B911F85B1BF5BD85009CFA47 /* ConversationSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversationSearchViewController.m; sourceTree = "<group>"; };
 		B923017F1C22B1D6001E0055 /* Gists.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gists.h; sourceTree = "<group>"; };
 		B92301801C22B1D6001E0055 /* Gists.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Gists.m; sourceTree = "<group>"; };
+		B926D6AA1C3E047700DA0ACD /* HealthKitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HealthKitViewController.h; sourceTree = "<group>"; };
+		B926D6AB1C3E047700DA0ACD /* HealthKitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HealthKitViewController.m; sourceTree = "<group>"; };
 		B946F9BA1C2A8619009C271E /* GistsCellWithNibTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GistsCellWithNibTableViewCell.h; sourceTree = "<group>"; };
 		B946F9BB1C2A8619009C271E /* GistsCellWithNibTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GistsCellWithNibTableViewCell.m; sourceTree = "<group>"; };
 		B946F9BC1C2A8619009C271E /* GistsCellWithNibTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GistsCellWithNibTableViewCell.xib; sourceTree = "<group>"; };
@@ -383,6 +386,16 @@
 			);
 			name = ConversationSearchVC;
 			path = Controllers/ConversationVC/ConversationSearchVC;
+			sourceTree = "<group>";
+		};
+		B926D6A91C3E040E00DA0ACD /* HealthKitVC */ = {
+			isa = PBXGroup;
+			children = (
+				B926D6AA1C3E047700DA0ACD /* HealthKitViewController.h */,
+				B926D6AB1C3E047700DA0ACD /* HealthKitViewController.m */,
+			);
+			name = HealthKitVC;
+			path = Controllers/HealthKitVC;
 			sourceTree = "<group>";
 		};
 		B94C9FDC1C214468004DB306 /* GistVC */ = {
@@ -728,6 +741,7 @@
 		B9C063331BE0CC8500433F42 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B926D6A91C3E040E00DA0ACD /* HealthKitVC */,
 				B94C9FDC1C214468004DB306 /* GistVC */,
 				B9AEF4F61C16E35A009301F5 /* CalendarVC */,
 				B96A815A1BE8B0C8009FA2EB /* ChatVC */,
@@ -1121,6 +1135,7 @@
 				B9AEF4C71C16D43C009301F5 /* FSCalendarCell.m in Sources */,
 				B94CA0391C214E60004DB306 /* AFURLResponseSerialization.m in Sources */,
 				B9FD20721BE1F02100784C96 /* CommonViewController.m in Sources */,
+				B926D6AC1C3E047700DA0ACD /* HealthKitViewController.m in Sources */,
 				B946F9BD1C2A8619009C271E /* GistsCellWithNibTableViewCell.m in Sources */,
 				B9AEF4CE1C16D43C009301F5 /* NSDate+FSExtension.m in Sources */,
 			);
@@ -1229,6 +1244,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/AppUITemplate/PrefixHeader.pch";
 				INFOPLIST_FILE = AppUITemplate/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jumperworker.ScrollViewDemo.AppUITemplate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1242,6 +1258,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/AppUITemplate/PrefixHeader.pch";
 				INFOPLIST_FILE = AppUITemplate/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jumperworker.ScrollViewDemo.AppUITemplate;
 				PRODUCT_NAME = "$(TARGET_NAME)";

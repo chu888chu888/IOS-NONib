@@ -11,6 +11,7 @@
 #import "CommonVC/CommonNavigationViewController.h"
 #import "FriendListVC/FriendsViewController.h"
 #import "GistViewController.h"
+#import "HealthKitViewController.h"
 @interface AppRootViewController ()
 
 @end
@@ -45,16 +46,23 @@
     
     GistViewController *gistVC=[[GistViewController alloc]init];
     [gistVC.tabBarItem setTitle:@"Github API"];
-    
     FAKFoundationIcons *cogIcon=[FAKFoundationIcons socialGithubIconWithSize:30];
     [cogIcon addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor]];
     UIImage *conImage = [cogIcon imageWithSize:CGSizeMake(30, 30)];
     [gistVC.tabBarItem setImage:conImage];
     [gistVC.tabBarItem setSelectedImage:conImage];
-     
     CommonNavigationViewController *gistNaVC=[[CommonNavigationViewController alloc]initWithRootViewController:gistVC];
     [childVCArray addObject:gistNaVC];
     
+    HealthKitViewController *healthVC=[[HealthKitViewController alloc] init];
+    [healthVC.tabBarItem setTitle:@"健康"];
+    FAKFoundationIcons *HealthIcon=[FAKFoundationIcons maleFemaleIconWithSize:30];
+    [HealthIcon addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor]];
+    UIImage *HealthImage = [HealthIcon imageWithSize:CGSizeMake(30, 30)];
+    [healthVC.tabBarItem setImage:HealthImage];
+    [healthVC.tabBarItem setSelectedImage:HealthImage];
+    CommonNavigationViewController *healthNaVC=[[CommonNavigationViewController alloc] initWithRootViewController:healthVC];
+    [childVCArray addObject:healthNaVC];
     
     [self setViewControllers:childVCArray];
 }
