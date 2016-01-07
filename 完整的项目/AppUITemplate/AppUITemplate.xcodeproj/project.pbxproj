@@ -12,7 +12,6 @@
 		B90BDF4E1BFDB7DD00A8F4E5 /* FounctionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B90BDF4D1BFDB7DD00A8F4E5 /* FounctionCell.m */; };
 		B911F85C1BF5BD85009CFA47 /* ConversationSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B911F85B1BF5BD85009CFA47 /* ConversationSearchViewController.m */; };
 		B92301811C22B1D6001E0055 /* Gists.m in Sources */ = {isa = PBXBuildFile; fileRef = B92301801C22B1D6001E0055 /* Gists.m */; };
-		B926D6AC1C3E047700DA0ACD /* HealthKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B926D6AB1C3E047700DA0ACD /* HealthKitViewController.m */; };
 		B946F9BD1C2A8619009C271E /* GistsCellWithNibTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B946F9BB1C2A8619009C271E /* GistsCellWithNibTableViewCell.m */; };
 		B946F9BE1C2A8619009C271E /* GistsCellWithNibTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B946F9BC1C2A8619009C271E /* GistsCellWithNibTableViewCell.xib */; };
 		B94C9FE21C21483C004DB306 /* GistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B94C9FE11C21483C004DB306 /* GistViewController.m */; };
@@ -93,6 +92,12 @@
 		B9AEF4F41C16D975009301F5 /* octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9AEF4E71C16D975009301F5 /* octicons.ttf */; };
 		B9AEF4F51C16D975009301F5 /* zocial-regular-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9AEF4E81C16D975009301F5 /* zocial-regular-webfont.ttf */; };
 		B9AEF4F91C16E37B009301F5 /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9AEF4F81C16E37B009301F5 /* CalendarViewController.m */; };
+		B9BF70BA1C3E323D00B31B05 /* HealthData.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BF70B71C3E323D00B31B05 /* HealthData.m */; };
+		B9BF70BB1C3E323D00B31B05 /* HealthKitHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BF70B91C3E323D00B31B05 /* HealthKitHelper.m */; };
+		B9BF70BD1C3E32BA00B31B05 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9BF70BC1C3E32BA00B31B05 /* HealthKit.framework */; };
+		B9BF70C11C3E32E700B31B05 /* HealthKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BF70BF1C3E32E700B31B05 /* HealthKitViewController.m */; };
+		B9BF70C21C3E32E700B31B05 /* HealthKitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9BF70C01C3E32E700B31B05 /* HealthKitViewController.xib */; };
+		B9BF70C61C3E3B0000B31B05 /* HKHealthStore+AAPLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BF70C51C3E3B0000B31B05 /* HKHealthStore+AAPLExtensions.m */; };
 		B9C0631B1BE0CC2F00433F42 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C0631A1BE0CC2F00433F42 /* main.m */; };
 		B9C0631E1BE0CC2F00433F42 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C0631D1BE0CC2F00433F42 /* AppDelegate.m */; };
 		B9C063271BE0CC2F00433F42 /* AppUITemplate.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B9C063251BE0CC2F00433F42 /* AppUITemplate.xcdatamodeld */; };
@@ -143,8 +148,6 @@
 		B911F85B1BF5BD85009CFA47 /* ConversationSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversationSearchViewController.m; sourceTree = "<group>"; };
 		B923017F1C22B1D6001E0055 /* Gists.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gists.h; sourceTree = "<group>"; };
 		B92301801C22B1D6001E0055 /* Gists.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Gists.m; sourceTree = "<group>"; };
-		B926D6AA1C3E047700DA0ACD /* HealthKitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HealthKitViewController.h; sourceTree = "<group>"; };
-		B926D6AB1C3E047700DA0ACD /* HealthKitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HealthKitViewController.m; sourceTree = "<group>"; };
 		B946F9BA1C2A8619009C271E /* GistsCellWithNibTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GistsCellWithNibTableViewCell.h; sourceTree = "<group>"; };
 		B946F9BB1C2A8619009C271E /* GistsCellWithNibTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GistsCellWithNibTableViewCell.m; sourceTree = "<group>"; };
 		B946F9BC1C2A8619009C271E /* GistsCellWithNibTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GistsCellWithNibTableViewCell.xib; sourceTree = "<group>"; };
@@ -297,6 +300,17 @@
 		B9AEF4E81C16D975009301F5 /* zocial-regular-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "zocial-regular-webfont.ttf"; sourceTree = "<group>"; };
 		B9AEF4F71C16E37B009301F5 /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
 		B9AEF4F81C16E37B009301F5 /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
+		B9BF70B61C3E323D00B31B05 /* HealthData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HealthData.h; sourceTree = "<group>"; };
+		B9BF70B71C3E323D00B31B05 /* HealthData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HealthData.m; sourceTree = "<group>"; };
+		B9BF70B81C3E323D00B31B05 /* HealthKitHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HealthKitHelper.h; sourceTree = "<group>"; };
+		B9BF70B91C3E323D00B31B05 /* HealthKitHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HealthKitHelper.m; sourceTree = "<group>"; };
+		B9BF70BC1C3E32BA00B31B05 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		B9BF70BE1C3E32E700B31B05 /* HealthKitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HealthKitViewController.h; sourceTree = "<group>"; };
+		B9BF70BF1C3E32E700B31B05 /* HealthKitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HealthKitViewController.m; sourceTree = "<group>"; };
+		B9BF70C01C3E32E700B31B05 /* HealthKitViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HealthKitViewController.xib; sourceTree = "<group>"; };
+		B9BF70C31C3E366000B31B05 /* AppUITemplate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = AppUITemplate.entitlements; sourceTree = "<group>"; };
+		B9BF70C41C3E3B0000B31B05 /* HKHealthStore+AAPLExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HKHealthStore+AAPLExtensions.h"; sourceTree = "<group>"; };
+		B9BF70C51C3E3B0000B31B05 /* HKHealthStore+AAPLExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HKHealthStore+AAPLExtensions.m"; sourceTree = "<group>"; };
 		B9C063161BE0CC2F00433F42 /* AppUITemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppUITemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9C0631A1BE0CC2F00433F42 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B9C0631C1BE0CC2F00433F42 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -362,6 +376,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9BF70BD1C3E32BA00B31B05 /* HealthKit.framework in Frameworks */,
 				B9AEF4D21C16D602009301F5 /* CoreText.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -391,8 +406,9 @@
 		B926D6A91C3E040E00DA0ACD /* HealthKitVC */ = {
 			isa = PBXGroup;
 			children = (
-				B926D6AA1C3E047700DA0ACD /* HealthKitViewController.h */,
-				B926D6AB1C3E047700DA0ACD /* HealthKitViewController.m */,
+				B9BF70BE1C3E32E700B31B05 /* HealthKitViewController.h */,
+				B9BF70BF1C3E32E700B31B05 /* HealthKitViewController.m */,
+				B9BF70C01C3E32E700B31B05 /* HealthKitViewController.xib */,
 			);
 			name = HealthKitVC;
 			path = Controllers/HealthKitVC;
@@ -608,6 +624,7 @@
 		B9AEF4801C16D375009301F5 /* Vender */ = {
 			isa = PBXGroup;
 			children = (
+				B9BF70B51C3E323D00B31B05 /* HealthKit */,
 				B9E6AA441C23DF72000C1E11 /* MJAlertView */,
 				B9E6AA401C23DB23000C1E11 /* MBProgressHUD */,
 				B94CA0571C214F17004DB306 /* AFNetworkActivityLogger */,
@@ -691,6 +708,19 @@
 			path = Controllers/CalendarVC;
 			sourceTree = "<group>";
 		};
+		B9BF70B51C3E323D00B31B05 /* HealthKit */ = {
+			isa = PBXGroup;
+			children = (
+				B9BF70C41C3E3B0000B31B05 /* HKHealthStore+AAPLExtensions.h */,
+				B9BF70C51C3E3B0000B31B05 /* HKHealthStore+AAPLExtensions.m */,
+				B9BF70B61C3E323D00B31B05 /* HealthData.h */,
+				B9BF70B71C3E323D00B31B05 /* HealthData.m */,
+				B9BF70B81C3E323D00B31B05 /* HealthKitHelper.h */,
+				B9BF70B91C3E323D00B31B05 /* HealthKitHelper.m */,
+			);
+			path = HealthKit;
+			sourceTree = "<group>";
+		};
 		B9C0630D1BE0CC2F00433F42 = {
 			isa = PBXGroup;
 			children = (
@@ -727,6 +757,8 @@
 		B9C063191BE0CC2F00433F42 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B9BF70C31C3E366000B31B05 /* AppUITemplate.entitlements */,
+				B9BF70BC1C3E32BA00B31B05 /* HealthKit.framework */,
 				B9AEF4D11C16D602009301F5 /* CoreText.framework */,
 				B9C063281BE0CC2F00433F42 /* Assets.xcassets */,
 				B9C0632A1BE0CC2F00433F42 /* LaunchScreen.storyboard */,
@@ -980,6 +1012,11 @@
 					B9C063151BE0CC2F00433F42 = {
 						CreatedOnToolsVersion = 7.1;
 						DevelopmentTeam = Y74CLK4RJ3;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -1013,6 +1050,7 @@
 				B9FD206B1BE1EF5D00784C96 /* Discover.xcassets in Resources */,
 				B9FD20681BE1EF5D00784C96 /* 7.jpg in Resources */,
 				B9FD20651BE1EF5D00784C96 /* 12.jpg in Resources */,
+				B9BF70C21C3E32E700B31B05 /* HealthKitViewController.xib in Resources */,
 				B9AEF4F01C16D975009301F5 /* FontAwesome.otf in Resources */,
 				B9FD20631BE1EF5D00784C96 /* 10.jpeg in Resources */,
 				B9FD20611BE1EF5D00784C96 /* 0.jpg in Resources */,
@@ -1047,6 +1085,7 @@
 				B94CA0561C214E60004DB306 /* UIView+WebCacheOperation.m in Sources */,
 				B94CA03F1C214E60004DB306 /* UIAlertView+AFNetworking.m in Sources */,
 				B94CA0501C214E60004DB306 /* SDWebImagePrefetcher.m in Sources */,
+				B9BF70BA1C3E323D00B31B05 /* HealthData.m in Sources */,
 				B94CA05E1C215AA4004DB306 /* BaseSource.m in Sources */,
 				B94CA0321C214E60004DB306 /* AFHTTPRequestOperation.m in Sources */,
 				B9C063391BE0CD0500433F42 /* AppRootViewController.m in Sources */,
@@ -1060,6 +1099,7 @@
 				B96A815D1BE8B0F0009FA2EB /* ChatViewController.m in Sources */,
 				B980E0C11BE9ED7C00FFE741 /* DataHelper.m in Sources */,
 				B94CA04C1C214E60004DB306 /* SDWebImageDecoder.m in Sources */,
+				B9BF70C61C3E3B0000B31B05 /* HKHealthStore+AAPLExtensions.m in Sources */,
 				B9FD208B1BE217C400784C96 /* UIImage+TL.m in Sources */,
 				B94CA0401C214E60004DB306 /* UIButton+AFNetworking.m in Sources */,
 				B94CA0521C214E60004DB306 /* UIImage+GIF.m in Sources */,
@@ -1092,6 +1132,7 @@
 				B9C063271BE0CC2F00433F42 /* AppUITemplate.xcdatamodeld in Sources */,
 				B94CA0361C214E60004DB306 /* AFSecurityPolicy.m in Sources */,
 				B94CA0451C214E60004DB306 /* AFHTTPRequestSerializer+OAuth2.m in Sources */,
+				B9BF70C11C3E32E700B31B05 /* HealthKitViewController.m in Sources */,
 				B9E6AA431C23DB23000C1E11 /* MBProgressHUD.m in Sources */,
 				B94CA0421C214E60004DB306 /* UIProgressView+AFNetworking.m in Sources */,
 				B94CA0331C214E60004DB306 /* AFHTTPRequestOperationManager.m in Sources */,
@@ -1117,6 +1158,7 @@
 				B94CA05A1C214F17004DB306 /* AFNetworkActivityLogger.m in Sources */,
 				B96A81601BE8BA41009FA2EB /* FriendsViewController.m in Sources */,
 				B94CA03A1C214E60004DB306 /* AFURLSessionManager.m in Sources */,
+				B9BF70BB1C3E323D00B31B05 /* HealthKitHelper.m in Sources */,
 				B94CA0351C214E60004DB306 /* AFNetworkReachabilityManager.m in Sources */,
 				B94CA0621C215E4B004DB306 /* GistDataSource.m in Sources */,
 				B9C0631E1BE0CC2F00433F42 /* AppDelegate.m in Sources */,
@@ -1135,7 +1177,6 @@
 				B9AEF4C71C16D43C009301F5 /* FSCalendarCell.m in Sources */,
 				B94CA0391C214E60004DB306 /* AFURLResponseSerialization.m in Sources */,
 				B9FD20721BE1F02100784C96 /* CommonViewController.m in Sources */,
-				B926D6AC1C3E047700DA0ACD /* HealthKitViewController.m in Sources */,
 				B946F9BD1C2A8619009C271E /* GistsCellWithNibTableViewCell.m in Sources */,
 				B9AEF4CE1C16D43C009301F5 /* NSDate+FSExtension.m in Sources */,
 			);
@@ -1241,6 +1282,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AppUITemplate/AppUITemplate.entitlements;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/AppUITemplate/PrefixHeader.pch";
 				INFOPLIST_FILE = AppUITemplate/Info.plist;
@@ -1255,6 +1297,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AppUITemplate/AppUITemplate.entitlements;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/AppUITemplate/PrefixHeader.pch";
 				INFOPLIST_FILE = AppUITemplate/Info.plist;
